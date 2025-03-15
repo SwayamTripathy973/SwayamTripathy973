@@ -1,4 +1,4 @@
-async function loadHeaderFooter() {
+async function loadHeaderFooter() { 
     const currentPath = window.location.pathname;
     const excludedFolders = ['/stuff/', '/NewBoardGames/']; // Removed '/Tripathywebsolutions.co/'
     if (excludedFolders.some((folder) => currentPath.startsWith(folder))) {
