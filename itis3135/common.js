@@ -7,13 +7,13 @@ async function loadHeaderFooter() {
     try {
         const headerResponse = await fetch('header.html');
         const footerResponse = await fetch('footer.html');
-        if (!headerResponse.ok || !footerResponse.ok) { // Corrected line
+        if (!headerResponse.ok || !footerResponse.ok) {
             throw new Error('Failed to load header or footer');
         }
         const headerHtml = await headerResponse.text();
         const footerHtml = await footerResponse.text();
         document.body.insertAdjacentHTML('afterbegin', headerHtml);
-        document.body.insertAdjacentHTML('beforeend', footerHtml);
+        document.body.insertAdjacentHTML('beforeend', footerHtml); // Corrected line
     } catch (error) {
         console.error('Error loading header/footer:', error);
     }
