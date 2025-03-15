@@ -1,12 +1,12 @@
-async function loadHeaderFooter() { 
+async function loadHeaderFooter() {
     const currentPath = window.location.pathname;
-    const excludedFolders = ['/stuff/', '/NewBoardGames/']; // Removed '/Tripathywebsolutions.co/'
-    if (excludedFolders.some((folder) => currentPath.startsWith(folder))) {
+    const excludedFolders = ['/stuff/', '/NewBoardGames/', '/Tripathywebsolutions.co/'];
+    if (excludedFolders.some((folder) => currentPath.startsWith(folder))) { // Add parentheses here
         return;
     }
     try {
-        const headerResponse = await fetch('../components/header.html');
-        const footerResponse = await fetch('../components/footer.html');
+        const headerResponse = await fetch('header.html');
+        const footerResponse = await fetch('footer.html');
         if (!headerResponse.ok || !footerResponse.ok) {
             throw new Error('Failed to load header or footer');
         }
