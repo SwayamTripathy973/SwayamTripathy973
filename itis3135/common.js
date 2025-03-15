@@ -1,7 +1,7 @@
 async function loadHeaderFooter() {
     const currentPath = window.location.pathname;
     const excludedFolders = ['/stuff/', '/NewBoardGames/', '/Tripathywebsolutions.co/'];
-    if (excludedFolders.some((folder) => currentPath.startsWith(folder))) { // Corrected line
+    if (excludedFolders.some((folder) => currentPath.startsWith(folder))) { // Add parentheses here
         return;
     }
     try {
