@@ -2,58 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>THE WORST PAGE EVER!!!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swayam's Homepage</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
-        @font-face {
-            font-family: 'Papyrus';
-            src: local('Papyrus');
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
         }
-        @font-face {
-            font-family: 'Comic Sans MS';
-            src: local('Comic Sans MS');
+        header {
+            background-color: #add8e6;
+            color: #00008b;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav a {
+            color: #00008b;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        main {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 20px;
+        }
+        footer nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
         }
     </style>
+    <script src="common.js" defer></script>
 </head>
-<body style="background-color: lime; margin: 0; padding: 50px 0 0 0;">
-    <div data-include="components/header.html"></div>
-    <h2 style="font-family: 'Comic Sans MS'; text-align: center; color: magenta;">This is the crappy page of mine!</h2>
-    <h1 style="font-family: Papyrus; text-align: center; color: brown;">THIS IS A bigger header before smaller header </h1>
-
-    <div style="text-align: center;">
-        <ul style="display: inline-block; text-align: left;">
-            <li style="color: yellow; text-decoration: underline;">This link looks like one but not a link </li>
-            <li style="font-size: 24px; color: cyan;">THIS is an annoying large text TEXT</li>
-            <li style="font-family: Times New Roman; color: orange;">Times New Roman text here</li>
-        </ul>
-    </div>
-
-    <p style="text-align: center; margin-left: 100px; margin-right: 20px; font-size: 36px; color: purple;">
-        This paragraph is increadibly incositant and weird !
-    </p>
-
-    <div style="border-top: 10px dotted red;
-                border-right: 15px dashed green;
-                border-bottom: 20px solid blue;
-                border-left: 25px double purple;
-                padding: 20px;
-                margin: 20px;
-                background-color: #ffcc99;">
-        <p style="text-decoration: underline; color: #663399;">
-            This text is underlined but its definatly not al ink
-        </p>
-    </div>
-
-    <div style="text-align: center;">
-        <img src="https://media.istockphoto.com/id/1498888707/photo/chicago-skyline.jpg?s=612x612&w=0&k=20&c=Yzu1g10rDMIuJ3nR3RQsjEZUiLrFIiARUTaOg0tQns8="
-            width="500"
-            height="500"
-            alt="Chicago skyline"
-            style="border: 2px solid red;">
-        <h3 style="background-color: yellow; display: inline-block;">My favorite recipe for banana bread!</h3>
-    </div>
-
-    <div data-include="components/footer.html"></div>
-
-    <script src="../scripts/include.js"></script>
+<body>
+    <div class="nav-bar-divider"></div>
+    <main>
+        <h2>Welcome!</h2>
+        <p>This is my personal homepage.</p>
+        <a href="NewBoardGames/index.html">Go to New Board Games site</a>
+    </main>
 </body>
 </html>
