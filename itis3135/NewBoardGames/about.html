@@ -6,7 +6,17 @@
     <link rel="stylesheet" href="styles/business.css">
 </head>
 <body>
-    <div id="header-container"></div>
+    <header>
+        <nav>
+            <a href="index.html">Home</a> ||
+            <a href="about.html">About</a> ||
+            <a href="../contract.html">Contract</a> ||
+            <a href="../stuff/MY_crapPy_paGE.htm">Crappy Page</a> ||
+            <a href="../website_evaluations.html">Website Evaluations</a> ||
+            <a href="../index.html">Home</a> ||
+            <a href="Tripathywebsolutions.co/index.html">Tripathy Web Solutions</a>
+        </nav>
+    </header>
     <main>
         <h2>About Super Tiger's New Board Games</h2>
         <p>At Super Tiger's New Board Games, we're not just making board games; we're crafting immersive experiences. Our games combine captivating narratives with strategic gameplay, encouraging players to unleash their creativity and problem-solving skills. We offer a variety of genres, from fantasy epics to sci-fi adventures, ensuring there's something for every type of gamer.</p>
@@ -25,20 +35,21 @@
             </ul>
         </section>
     </main>
-    <div id="footer-container"></div>
-
-    <script>
-        async function loadHeaderFooter() {
-            const headerResponse = await fetch('../header.html');
-            const headerHtml = await headerResponse.text();
-            document.getElementById('header-container').innerHTML = headerHtml;
-
-            const footerResponse = await fetch('../footer.html');
-            const footerHtml = await footerResponse.text();
-            document.getElementById('footer-container').innerHTML = footerHtml;
-        }
-
-        loadHeaderFooter();
-    </script>
+    <footer>
+        <nav>
+            <a href="https://github.com/SwayamTripathy973">GitHub</a> ||
+            <a href="https://swayamtripathy973.github.io/">ITIS3135.io</a> ||
+            <a href="https://www.linkedin.com/in/swayam-tripathy-991180286/">LinkedIn</a>
+        </nav>
+        <p>Page Built by Swayam Tripathy | &copy;2024</p>
+        <p>
+            <a href="https://validator.w3.org/check?uri=referer">
+                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS">
+            </a>
+        </p>
+    </footer>
 </body>
 </html>
