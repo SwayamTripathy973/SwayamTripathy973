@@ -7,118 +7,58 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #FFFFFF;
-            color: #2D3142;
+            background-color: #edf2f7;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
         }
-
         header {
-            background-color: #2D3142;
-            color: #FFFFFF;
-            padding: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo {
-            width: 50px;
-            height: 50px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #EF8354;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-
-        h2 {
-            color: #4F5D75;
-            border-bottom: 3px solid #EF8354;
-            padding-bottom: 0.5rem;
-        }
-
-        .services-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .services-list li {
-            margin: 1rem 0;
-            padding-left: 2rem;
-            position: relative;
-        }
-
-        .services-list li::before {
-            content: "▹";
-            color: #EF8354;
-            position: absolute;
-            left: 0;
-        }
-
-        .contact-info {
-            background-color: #BFC0C0;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-        }
-
-        footer {
-            background-color: #2D3142;
-            color: #FFFFFF;
+            background-color: #1a202c;
+            color: #ffffff;
+            padding: 20px;
             text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
         }
-
-        footer em {
-            color: #EF8354;
-            font-style: italic;
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contact-info {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #4a5568;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #4a5568;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="images/st-logo.png" alt="Swayam Tripathy Logo" class="logo" width="50" height="50">
-            <h1>Swayam Tripathy Web Solutions</h1>
-        </div>
-    </header>
+    <div data-include="../components/header.html"></div>
 
     <main>
         <h2>Innovative Web Solutions</h2>
-
-        <p>Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship. We specialize in creating stunning, user-centric web experiences that help businesses thrive in the digital landscape. With our expertise in modern web technologies and design principles, we transform your vision into reality.</p>
-
-        <ul class="services-list">
-            <li>Custom Web Design &amp; Development</li>
+        <p>Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship...</p>
+        
+        <ul>
+            <li>Custom Web Design & Development</li>
             <li>Responsive Mobile-First Solutions</li>
             <li>E-commerce Integration</li>
-            <li>User Experience (UX) Optimization</li>
-            <li>Search Engine Optimization (SEO)</li>
-            <li>Content Management Systems</li>
-            <li>Web Application Development</li>
-            <li>Digital Brand Strategy</li>
+            <li>SEO & CMS Solutions</li>
         </ul>
 
         <div class="contact-info">
             <h3>Let's Build Your Digital Success</h3>
-            <p>Ready to elevate your digital presence? Contact us today!</p>
+            <p>Contact us today!</p>
             <p>
                 📧 Email: info@swayamtripathywebsolutions.co<br>
                 📱 Phone: (704) 123-4567<br>
@@ -127,9 +67,29 @@
         </div>
     </main>
 
-    <footer>
-        <em>Building Your Digital Success</em>
-        <p>&copy; 2024 Swayam Tripathy Web Solutions</p>
-    </footer>
+    <div data-include="../components/footer.html"></div>
+
+    <script>
+        function includeHTML() {
+            const elements = document.querySelectorAll('[data-include]');
+            elements.forEach(el => {
+                const file = el.getAttribute('data-include');
+                if (file) {
+                    fetch(file)
+                        .then(response => {
+                            if (response.ok) return response.text();
+                            else throw new Error('Page not found');
+                        })
+                        .then(data => {
+                            el.innerHTML = data;
+                            el.removeAttribute('data-include');
+                        })
+                        .catch(error => console.error(error));
+                }
+            });
+        }
+
+        includeHTML();
+    </script>
 </body>
 </html>
