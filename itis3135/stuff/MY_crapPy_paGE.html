@@ -15,16 +15,7 @@
     </style>
 </head>
 <body style="background-color: lime; margin: 0; padding: 50px 0 0 0;">
-    <header>
-        <h1>Swayam Tripathy | ITIS3135</h1>
-        <nav>
-            <a href="../index.html">Home</a> ||
-            <a href="../introduction.html">Introduction</a> ||
-            <a href="../contract.html">Contract</a> ||
-            <a href="MY_crapPy_paGE.htm">Crappy Page</a> ||
-            <a href="../website_evaluations.html">Website Evaluations</a>
-        </nav>
-    </header>
+    <div data-include="components/header.html"></div>
     <h2 style="font-family: 'Comic Sans MS'; text-align: center; color: magenta;">This is the crappy page of mine!</h2>
     <h1 style="font-family: Papyrus; text-align: center; color: brown;">THIS IS A bigger header before smaller header </h1>
 
@@ -41,12 +32,12 @@
     </p>
 
     <div style="border-top: 10px dotted red;
-        border-right: 15px dashed green;
-        border-bottom: 20px solid blue;
-        border-left: 25px double purple;
-        padding: 20px;
-        margin: 20px;
-        background-color: #ffcc99;">
+                border-right: 15px dashed green;
+                border-bottom: 20px solid blue;
+                border-left: 25px double purple;
+                padding: 20px;
+                margin: 20px;
+                background-color: #ffcc99;">
         <p style="text-decoration: underline; color: #663399;">
             This text is underlined but its definatly not al ink
         </p>
@@ -61,21 +52,8 @@
         <h3 style="background-color: yellow; display: inline-block;">My favorite recipe for banana bread!</h3>
     </div>
 
-    <footer>
-        <nav>
-            <a href="https://github.com/SwayamTripathy973">GitHub</a> ||
-            <a href="https://swayamtripathy973.github.io/">ITIS3135.io</a> ||
-            <a href="https://www.linkedin.com/in/swayam-tripathy-991180286/">LinkedIn</a>
-        </nav>
-        <p>Page Built by Swayam Tripathy | &copy;2024</p>
-        <p>
-            <a href="https://validator.w3.org/check?uri=referer">
-                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML">
-            </a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS">
-            </a>
-        </p>
-    </footer>
+    <div data-include="components/footer.html"></div>
+
+    <script src="../scripts/include.js"></script>
 </body>
 </html>
