@@ -7,7 +7,16 @@
     <script src="scripts/validator.js"></script>
 </head>
 <body>
-    <div id="header-container"></div>
+    <header>
+        <h1>Swayam Tripathy | ITIS3135</h1>
+        <nav>
+            <a href="index.html">Home</a> ||
+            <a href="introduction.html">Introduction</a> ||
+            <a href="contract.html">Contract</a> ||
+            <a href="stuff/MY_CRAPPY_PAGE_.htm">Crappy Page</a> ||
+            <a href="website_evaluations.html">Website Evaluations</a>
+        </nav>
+    </header>
     <main>
         <h2>Contract</h2>
         <p>I, <a href="introduction.html">Swayam Tripathy</a> agree to abide by the terms in my Spring 2024 ITIS3135 Web Application Design and Development with my instructor, D.I. von Briesen.</p>
@@ -15,20 +24,4 @@
         <p>I also understand that it is my work that counts for attendance, not logins or showing up for class. As such, failure to turn in assignments may show as absences.</p>
         <p>Signed: <em>Swayam Tripathy</em>, 03/07/2025</p>
     </main>
-    <div id="footer-container"></div>
-
-    <script>
-        async function loadHeaderFooter() {
-            const headerResponse = await fetch('header.html');
-            const headerHtml = await headerResponse.text();
-            document.getElementById('header-container').innerHTML = headerHtml;
-
-            const footerResponse = await fetch('footer.html');
-            const footerHtml = await footerResponse.text();
-            document.getElementById('footer-container').innerHTML = footerHtml;
-        }
-
-        loadHeaderFooter();
-    </script>
-</body>
-</html>
+    <footer>
