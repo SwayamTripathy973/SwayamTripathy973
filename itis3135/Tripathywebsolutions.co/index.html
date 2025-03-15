@@ -85,7 +85,21 @@
     </style>
 </head>
 <body>
-    <div id="header-container"></div>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Swayam Tripathy Web Solutions Logo" class="logo" width="100" height="100">
+            <h1>Swayam Tripathy Web Solutions</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a> ||
+            <a href="introduction.html">Introduction</a> ||
+            <a href="contract.html">Contract</a> ||
+            <a href="stuff/MY_crapPy_paGE.htm">Crappy Page</a> ||
+            <a href="website_evaluations.html">Website Evaluations</a> ||
+            <a href="NewBoardGames/index.html">New Board Games</a> ||
+            <a href="Tripathywebsolutions.co/index.html">Tripathy Web Solutions</a>
+        </nav>
+    </header>
 
     <main>
         <h2>Innovative Web Solutions</h2>
@@ -114,20 +128,8 @@
         </div>
     </main>
 
-    <div id="footer-container"></div>
-
-    <script>
-        async function loadHeaderFooter() {
-            const headerResponse = await fetch('header.html');
-            const headerHtml = await headerResponse.text();
-            document.getElementById('header-container').innerHTML = headerHtml;
-
-            const footerResponse = await fetch('footer.html');
-            const footerHtml = await footerResponse.text();
-            document.getElementById('footer-container').innerHTML = footerHtml;
-        }
-
-        loadHeaderFooter();
-    </script>
+    <footer>
+        <p>Page Built by Swayam Tripathy | &copy;2024</p>
+    </footer>
 </body>
 </html>
