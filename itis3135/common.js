@@ -1,6 +1,6 @@
 async function loadHeaderFooter() {
     const currentPath = window.location.pathname;
-    const excludedFolders = ['/stuff/', '/NewBoardGames/', '/Tripathywebsolutions.co/'];
+    const excludedFolders = ['/stuff/', '/NewBoardGames/', '/Tripathywebsolutions.co/']; // Corrected line
     if (excludedFolders.some(folder => currentPath.startsWith(folder))) {
         return;
     }
@@ -13,7 +13,7 @@ async function loadHeaderFooter() {
         const headerHtml = await headerResponse.text();
         const footerHtml = await footerResponse.text();
         document.body.insertAdjacentHTML('afterbegin', headerHtml);
-        document.body.insertAdjacentHTML('beforeend', footerHtml); // Corrected line
+        document.body.insertAdjacentHTML('beforeend', footerHtml);
     } catch (error) {
         console.error('Error loading header/footer:', error);
     }
