@@ -7,25 +7,28 @@
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-    <div id="header-container"></div>
-
+    <header>
+        <h1>Swayam Tripathy | ITIS3135</h1>
+        <nav>
+            <a href="index.html">Home</a> ||
+            <a href="introduction.html">Introduction</a> ||
+            <a href="contract.html">Contract</a> ||
+            <a href="stuff/MY_crapPy_paGE.htm">Crappy Page</a> ||
+            <a href="website_evaluations.html">Website Evaluations</a>
+        </nav>
+    </header>
     <main>
         <h2>Introduction</h2>
         <h2>Swayam Tripathy</h2>
-
         <section class="background-info">
             <h3>Personal Background</h3>
             <p>I was born in Minnesota and moved around a lot with my parents before they settled here. I chose UNC Charlotte because of the strong Computer Science program as well as additional facilities like the gym, clubs, and career center that will help me become a stronger person. One thing that was  intresting  was how I got into computer science. I was playing video games and realized that the certain elements of the game i was playing was increadibly similar and had specfic patterns and I reasearched how to do that.</p>
-
             <h3>Professional Background</h3>
             <p>I have experience in Java, Python, and C++. I am good at working in teams for projects in computer science as well as figuring out problems with code.</p>
-
             <h3>Academic Background</h3>
             <p>I'm a sophomore at UNCC in Computer Science and plan to major in cybersecurity.</p>
-
             <h3>Primary Computer Platform</h3>
             <p>MacBook</p>
-
             <h3>Courses I'm Taking, & Why</h3>
             <ul>
                 <li><strong>ITIS 3135 - Web-Based Application Design & Development:</strong> In order to learn how to code websites so I can gain real experience on real projects.</li>
@@ -35,21 +38,23 @@
             </ul>
         </section>
     </main>
-
-    <div id="footer-container"></div>
-
-    <script>
-        async function loadHeaderFooter() {
-            const headerResponse = await fetch('header.html');
-            const headerHtml = await headerResponse.text();
-            document.getElementById('header-container').innerHTML = headerHtml;
-
-            const footerResponse = await fetch('footer.html');
-            const footerHtml = await footerResponse.text();
-            document.getElementById('footer-container').innerHTML = footerHtml;
-        }
-
-        loadHeaderFooter();
-    </script>
+    <footer>
+        <nav>
+            <a href="https://webpages.charlotte.edu/SwayamTripathy973/">Charlotte.edu</a> ||
+            <a href="https://github.com/SwayamTripathy973">GitHub</a> ||
+            <a href="https://swayamtripathy973.github.io/itis3135/index.html">ITIS3135.io</a> ||
+            <a href="https://swayamtripathy973.github.io/itis3134/index.html">ITIS3134.io</a> ||
+            <a href="https://www.linkedin.com/in/swayam-tripathy-991180286/">LinkedIn</a>
+        </nav>
+        <p>Page Built by <a href="https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/introduction.html">NewBoardGames</a> | &copy;2023</p>
+        <p>
+            <a href="https://validator.w3.org/check?uri=referer">
+                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS">
+            </a>
+        </p>
+    </footer>
 </body>
 </html>
