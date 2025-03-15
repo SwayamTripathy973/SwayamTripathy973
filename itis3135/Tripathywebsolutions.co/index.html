@@ -86,7 +86,7 @@
     </style>
 </head>
 <body>
-    <div w3-include-html="../components/header.html"></div>
+    <div id="header"></div>
     <main>
         <h2>Innovative Web Solutions</h2>
         <p>Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship. We specialize in creating modern, responsive, and user-centric web experiences that empower businesses to thrive online. Leveraging the latest web technologies and design principles, we turn your digital vision into reality.</p>
@@ -110,7 +110,38 @@
             </p>
         </div>
     </main>
-    <div w3-include-html="../components/footer.html"></div>
+    <div id="footer"></div>
     <script src="../scripts/HTMLInclude.js"></script>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /* Search for elements with a certain attribute: */
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+        
+        includeHTML();
+    </script>
 </body>
 </html>
