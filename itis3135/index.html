@@ -6,71 +6,99 @@
     <title>Swayam's Homepage</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        body, div, header, main, footer, nav, a, p, h1, h2, h3, span, section {
+            box-sizing: inherit;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
             color: #333;
         }
+
         header {
-            background-color: #007bff;
-            color: white;
+            background-color: #add8e6;
+            color: #00008b;
             text-align: center;
             padding: 1em 0;
-            margin-bottom: 1em;
         }
+
+        nav a {
+            color: #00008b;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #00008b;
+            color: white;
+        }
+
         main {
-            box-sizing: border-box;
-            padding: 1em;
-            margin: 1em auto;
-            width: 80%;
             background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
+
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 1em 0;
-            margin-top: 1em;
+            margin-top: 20px;
         }
-        nav a {
+
+        footer nav a {
             color: white;
             text-decoration: none;
             margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        footer nav a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        .btn-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #00008b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-link:hover {
+            background-color: #3333cc;
         }
     </style>
+    <script src="scripts/HTMLInclude.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Swayam's UNCC Homepage</h1>
-        <nav>
-            <a href="index.html">Home</a> ||
-            <a href="introduction.html">Introduction</a> ||
-            <a href="contract.html">Contract</a> ||
-            <a href="stuff/MY_crapPy_paGE.html">Crappy Page</a> ||
-            <a href="website_evaluations.html">Website Evaluations</a> ||
-            <a href="NewBoardGames/index.html">New Board Games</a> ||
-            <a href="Tripathywebsolutions.co/index.html">Tripathy Web Solutions</a>
-        </nav>
-    </header>
+    <div data-include="components/header.html"></div>
     <main>
         <h2>Welcome!</h2>
         <p>This is my personal homepage.</p>
-        <a href="NewBoardGames/index.html">Go to New Board Games site</a>
+        <a class="btn-link" href="NewBoardGames/index.html">Go to New Board Games site</a>
     </main>
-    <footer>
-        <nav>
-            <a href="https://github.com/SwayamTripathy973">GitHub.com</a> ~
-            <a href="https://webpages.charlotte.edu/stripat5/">CLT Web</a> ~
-            <a href="https://swayamtripathy973.github.io/">GitHub.io</a> ~
-            <a href="https://swayamtripathy973.github.io/itis3135/index.html">ITIS3135</a> ~
-            <a href="https://www.linkedin.com/in/swayam-tripathy-991180286/">LinkedIn</a> ~
-            <a href="contract.html">Contract</a>
-            <a href="introduction.html">Introduction</a>
-        </nav>
-        <p>Page Built by <a href="introduction.html">Swayam Tripathy</a> | &copy; 2024</p>
-    </footer>
+    <div data-include="components/footer.html"></div>
 </body>
 </html>
