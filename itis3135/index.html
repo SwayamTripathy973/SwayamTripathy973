@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tripathy Web Solutions</title>
+    <title>Swayam's Homepage</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
         html {
             box-sizing: border-box;
@@ -14,45 +15,42 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f2f2f2;
-            color: #22224d;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
         }
 
         header {
-            background-color: #123456;
-            color: #ffffff;
-            padding: 20px;
+            background-color: #add8e6;
+            color: #00008b;
             text-align: center;
+            padding: 1em 0;
         }
 
-        .loop-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        nav a {
+            color: #00008b;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .loop {
-            margin-right: 10px;
-            border-radius: 50%;
+        nav a:hover {
+            background-color: #00008b;
+            color: white;
         }
 
-        .loop img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border: 2px solid #ccc;
-        }
-
-        .content {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
+        main {
             background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
 
         footer {
@@ -63,47 +61,44 @@
             margin-top: 20px;
         }
 
-        footer a {
+        footer nav a {
             color: white;
             text-decoration: none;
             margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        footer nav a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        .btn-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #00008b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-link:hover {
+            background-color: #3333cc;
         }
     </style>
+    <script src="scripts/HTMLInclude.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Tripathy Web Solutions</h1>
-    </header>
-
-    <div class="loop-container">
-        <div class="loop">
-            <img src="wmremove-transformed.jpeg" alt="Loop 1">
-        </div>
-        <div class="loop">
-            <img src="wmremove-transformed.jpeg" alt="Loop 2">
-        </div>
-        <div class="loop">
-            <img src="wmremove-transformed.jpeg" alt="Loop 3">
-        </div>
-    </div>
-
-    <div class="content">
-        <h2>Welcome to Tripathy Web Solutions</h2>
-        <p>This is a sample page for Tripathy Web Solutions.</p>
-        <p>You can add your website content here.</p>
-    </div>
-
-    <footer>
-        <nav>
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-        </nav>
-        <p>&copy; 2024 Tripathy Web Solutions</p>
-    </footer>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>Welcome!</h2>
+        <p>This is my personal homepage.</p>
+        <a class="btn-link" href="NewBoardGames/index.html">Go to New Board Games site</a>
+    </main>
+    <div data-include="components/footer.html"></div>
 </body>
 </html>
