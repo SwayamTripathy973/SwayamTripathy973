@@ -6,9 +6,14 @@
     <title>Swayam's Homepage</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
-        *, *::before, *::after {
+        html {
             box-sizing: border-box;
         }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,12 +21,14 @@
             background-color: #f0f0f0;
             color: #333;
         }
+
         header {
             background-color: #add8e6;
             color: #00008b;
             text-align: center;
             padding: 1em 0;
         }
+
         nav a {
             color: #00008b;
             text-decoration: none;
@@ -30,10 +37,12 @@
             border-radius: 4px;
             transition: background-color 0.3s, color 0.3s;
         }
+
         nav a:hover {
             background-color: #00008b;
             color: white;
         }
+
         main {
             background-color: white;
             padding: 20px;
@@ -43,6 +52,7 @@
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
+
         footer {
             background-color: #333;
             color: white;
@@ -50,6 +60,7 @@
             padding: 1em 0;
             margin-top: 20px;
         }
+
         footer nav a {
             color: white;
             text-decoration: none;
@@ -58,10 +69,12 @@
             border-radius: 4px;
             transition: background-color 0.3s, color 0.3s;
         }
+
         footer nav a:hover {
             background-color: white;
             color: #333;
         }
+
         .btn-link {
             display: inline-block;
             margin-top: 20px;
@@ -72,6 +85,7 @@
             border-radius: 5px;
             transition: background-color 0.3s;
         }
+
         .btn-link:hover {
             background-color: #3333cc;
         }
