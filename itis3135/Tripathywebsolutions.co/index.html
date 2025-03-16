@@ -48,7 +48,7 @@
     <main>
         <h2>Innovative Web Solutions</h2>
         <p>Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship...</p>
-        
+
         <ul>
             <li>Custom Web Design & Development</li>
             <li>Responsive Mobile-First Solutions</li>
@@ -69,27 +69,6 @@
 
     <div data-include="../components/footer.html"></div>
 
-    <script>
-        function includeHTML() {
-            const elements = document.querySelectorAll('[data-include]');
-            elements.forEach(el => {
-                const file = el.getAttribute('data-include');
-                if (file) {
-                    fetch(file)
-                        .then(response => {
-                            if (response.ok) return response.text();
-                            else throw new Error('Page not found');
-                        })
-                        .then(data => {
-                            el.innerHTML = data;
-                            el.removeAttribute('data-include');
-                        })
-                        .catch(error => console.error(error));
-                }
-            });
-        }
-
-        includeHTML();
-    </script>
+    <script src="scripts/html-include.js"></script>
 </body>
 </html>
