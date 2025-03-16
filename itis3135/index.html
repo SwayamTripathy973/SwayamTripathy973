@@ -7,7 +7,7 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
@@ -23,6 +23,13 @@
             color: #00008b;
             text-decoration: none;
             margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #00008b;
+            color: white;
         }
         main {
             background-color: white;
@@ -30,7 +37,8 @@
             margin: 20px auto;
             width: 80%;
             border: 1px solid #ddd;
-            box-sizing: border-box;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
         footer {
             background-color: #333;
@@ -43,6 +51,26 @@
             color: white;
             text-decoration: none;
             margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        footer nav a:hover {
+            background-color: white;
+            color: #333;
+        }
+        .btn-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #00008b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn-link:hover {
+            background-color: #3333cc;
         }
     </style>
     <script src="scripts/HTMLinclude.js" defer></script>
@@ -52,7 +80,7 @@
     <main>
         <h2>Welcome!</h2>
         <p>This is my personal homepage.</p>
-        <a href="NewBoardGames/index.html">Go to New Board Games site</a>
+        <a class="btn-link" href="NewBoardGames/index.html">Go to New Board Games site</a>
     </main>
     <div data-include="components/footer.html"></div>
 </body>
