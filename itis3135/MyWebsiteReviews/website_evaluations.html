@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,9 @@
             background-color: #f4f4f4;
         }
 
-        header, footer, nav {
+        header,
+        footer,
+        nav {
             background-color: #333;
             color: #fff;
             text-align: center;
@@ -33,7 +36,9 @@
             border: 1px solid #ddd;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             color: #333;
         }
 
@@ -53,7 +58,7 @@
 
         nav a:hover {
             background-color: #555;
-            text--decoration: none;
+            text-decoration: none;
         }
 
         ul {
@@ -65,24 +70,22 @@
             margin-bottom: 5px;
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var currentURL = encodeURIComponent(window.location.href);
-            document.getElementById("html-validator").href = "https://validator.w3.org/check?uri=" + currentURL;
-            document.getElementById("css-validator").href = "https://jigsaw.w3.org/css-validator/validator?uri=" + currentURL;
-        });
-    </script>
-    <script src="scripts/HTMLInclude.js"></script>
 </head>
+
 <body>
-    <div data-include="components/header.html"></div>
+    <header>
+        <h1>Website Evaluations - Swayam Tripathy - 3135</h1>
+        <p>Applying CRAP Principles</p>
+    </header>
+    <nav>
+        <a href="https://swayamtripathy973.github.io/SwayamTripathy973/">Home</a> | <a href="website_evaluations.html">Website Evaluations</a>
+    </nav>
     <main>
         <h2>Website Evaluations</h2>
 
         <section>
             <h3><a href="https://dribbble.com/" target="_blank">Dribbble</a></h3>
-            <p>Dribbble is a vibrant platform for designers to showcase their work and find inspiration. It excels in applying the CRAP principles, resulting in a visually appealing and user-friendly interface. Specifically, the site demonstrates excellent use of contrast, repetition, alignment, and proximity.</p>
-            <p>The site's design fosters a sense of community and creativity. The consistent grid layout and clear visual hierarchy make it easy for users to browse and discover new design work. The effective use of white space and color palettes contributes to a clean and modern aesthetic.</p>
+            <p>Dribbble is a vibrant platform for designers to showcase their work and find inspiration. It excels in applying the CRAP principles, resulting in a visually appealing and user-friendly interface.</p>
             <ul>
                 <li><strong>Contrast:</strong> Excellent use of contrast in colors and visual elements to make key features stand out.</li>
                 <li><strong>Repetition:</strong> Consistent layout and visual styles are repeated throughout the site, creating a cohesive experience.</li>
@@ -93,8 +96,7 @@
 
         <section>
             <h3><a href="https://www.lingscars.com/" target="_blank">LingsCars.com</a></h3>
-            <p>Ling's Cars is infamous for its extremely cluttered and chaotic design, which largely disregards the CRAP principles, resulting in a confusing and overwhelming user experience. The site lacks consistent contrast, repetition, alignment, and proximity, making it difficult to navigate and understand.</p>
-            <p>The overwhelming use of flashing graphics, animated text, and a multitude of colors creates a visually jarring experience. The lack of a clear layout and navigation structure makes it challenging for users to find the information they need. This design approach, while unique, ultimately detracts from the site's usability and effectiveness.</p>
+            <p>Ling's Cars is known for its extremely cluttered and chaotic design.</p>
             <ul>
                 <li><strong>Contrast:</strong> Excessive and random color choices create visual noise and make it hard to focus.</li>
                 <li><strong>Repetition:</strong> There is little to no consistent repetition; elements are randomly placed and styled.</li>
@@ -102,7 +104,14 @@
                 <li><strong>Proximity:</strong> Related elements are not grouped logically, making it difficult to understand the site's content.</li>
             </ul>
         </section>
+
     </main>
-    <div data-include="components/footer.html"></div>
+    <footer>
+        <nav>
+            <a href="https://swayamtripathy973.github.io/SwayamTripathy973/">Home</a> | <a href="website_evaluations.html">Website Evaluations</a>
+        </nav>
+        <p>&copy; 2024 Tripathywebsolutions.co | <a href="http://validator.w3.org/check?uri=referer">HTML Validation</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS Validation</a></p>
+    </footer>
 </body>
+
 </html>
