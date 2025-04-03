@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Evaluations - Swayam Tripathy - 3135</title>
+    <title>Website Evaluations</title>
     <style>
         body {
             font-family: sans-serif;
@@ -77,11 +77,16 @@
 </head>
 
 <body>
-    <div data-include="../components/header.html"></div>
+    <header>
+        <h1>ITSC 3135 - Swayam Tripathy</h1>
+        <p>Website Evaluations</p>
+    </header>
+
     <nav>
         <a href="https://swayamtripathy973.github.io/SwayamTripathy973/">Home</a> | 
         <a href="website_evaluations.html">Website Evaluations</a>
     </nav>
+
     <main>
         <h2>Website Evaluations</h2>
 
@@ -108,26 +113,17 @@
         </section>
 
     </main>
-    <div data-include="../components/footer.html"></div>
+
     <footer>
         <nav>
             <a href="https://swayamtripathy973.github.io/SwayamTripathy973/">Home</a> | 
             <a href="website_evaluations.html">Website Evaluations</a>
         </nav>
         <p>&copy; 2024 Tripathywebsolutions.co | 
-            <a href="#" id="html-validator" target="_blank">HTML Validation</a> | 
-            <a href="#" id="css-validator" target="_blank">CSS Validation</a>
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank">HTML Validation</a> | 
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS Validation</a>
         </p>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let currentURL = encodeURIComponent(window.location.href);
-            document.getElementById("html-validator").href = "https://validator.w3.org/check?uri=" + currentURL;
-            document.getElementById("css-validator").href = "https://jigsaw.w3.org/css-validator/validator?uri=" + currentURL;
-        });
-    </script>
-    <script src="../scripts/HTMLInclude.js"></script>
 </body>
 
 </html>
