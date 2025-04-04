@@ -27,11 +27,10 @@
             align-items: center;
         }
         .logo {
-            /* Ensuring the logo is visible */
-            width: 100px; /* Adjust as needed */
-            height: auto;
-            display: block;
+            margin-right: 20px;
             border-radius: 50%;
+            width: 150px;
+            height: 150px;
         }
         main {
             padding: 20px;
@@ -92,9 +91,10 @@
 <body>
     <header data-include="../components/header.html">
         <div class="logo-container">
-            <img src="path/to/your-logo.png" alt="Swayam Tripathy Web Solutions Logo" class="logo">
+            <img src="original-logo.png" alt="Swayam Tripathy Web Solutions Logo" class="logo">
         </div>
     </header>
+
     <main>
         <h2>Innovative Web Solutions</h2>
         <p>Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship. We specialize in creating modern, responsive, and user-centric web experiences that empower businesses to thrive online. Leveraging the latest web technologies and design principles, we turn your digital vision into reality.</p>
@@ -118,7 +118,9 @@
             </p>
         </div>
     </main>
+
     <footer data-include="../components/footer.html"></footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function includeHTML() {
