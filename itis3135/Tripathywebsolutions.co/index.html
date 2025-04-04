@@ -89,10 +89,26 @@
     </style>
 </head>
 <body>
-    <header data-include="../components/header.html">
+    <header>
         <div class="logo-container">
-            <img src="original-logo.png" alt="Swayam Tripathy Web Solutions Logo" class="logo">
+            <div style="background-color: #f0f0f0; border-radius: 50%; padding: 10px; display: inline-block; margin-right: 20px;">
+                <img src="wmremove-transformed.jpeg" alt="Swayam Web Solutions Logo" style="max-width: 150px; height: auto; display: block;">
+            </div>
+            <h1>Tripathy Web Solutions</h1>
         </div>
+        <nav>
+            <a href="https://webpages.charlotte.edu/swayamt/">Charlotte.edu</a>
+            ||
+            <a href="https://github.com/SwayamTripathy973/SwayamTripathy973.github.io">GitHub</a>
+            ||
+            <a href="https://swayamtripathy973.github.io/itis3135/index.html">ITIS3135.io</a>
+            ||
+            <a href="https://www.freecodecamp.org/swayamtripathy973">FreeCodeCamp</a>
+            ||
+            <a href="https://www.codecademy.com/profiles/swayamtripathy973">Codecademy</a>
+            ||
+            <a href="http://www.linkedin.com/in/swayam-tripathy">LinkedIn</a>
+        </nav>
     </header>
 
     <main>
@@ -119,34 +135,18 @@
         </div>
     </main>
 
-    <footer data-include="../components/footer.html"></footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function includeHTML() {
-                var z, i, elmnt, file, xhttp;
-                z = document.getElementsByTagName("*");
-                for (i = 0; i < z.length; i++) {
-                    elmnt = z[i];
-                    file = elmnt.getAttribute("data-include");
-                    if (file) {
-                        xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4) {
-                                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                                elmnt.removeAttribute("data-include");
-                                includeHTML();
-                            }
-                        }
-                        xhttp.open("GET", file, true);
-                        xhttp.send();
-                        return;
-                    }
-                }
-            }
-            includeHTML();
-        });
-    </script>
+    <footer>
+        <p>Page Built by <a href="TripathyWebSolutions.com/index.html">Tripathy Web Solutions</a> | &copy;2023</p>
+        <p>
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener noreferrer">
+                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener noreferrer">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+            </a>
+        </p>
+    </footer>
 </body>
 </html>
