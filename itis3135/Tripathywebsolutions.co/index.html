@@ -27,8 +27,10 @@
             align-items: center;
         }
         .logo {
-            /* Removed specific width/height here; controlled in header content */
+            margin-right: 20px;
             border-radius: 50%;
+            width: 150px;
+            height: 150px;
         }
         main {
             padding: 20px;
@@ -87,7 +89,27 @@
     </style>
 </head>
 <body>
-    <header data-include="#header-content"></header>
+    <header>
+        <div class="logo-container">
+            <div style="background-color: #f0f0f0; border-radius: 50%; padding: 10px; display: inline-block; margin-right: 20px;">
+                <img src="wmremove-transformed.jpeg" alt="Swayam Web Solutions Logo" style="max-width: 150px; height: auto; display: block;">
+            </div>
+            <h1>Tripathy Web Solutions</h1>
+        </div>
+        <nav>
+            <a href="https://webpages.charlotte.edu/swayamt/">Charlotte.edu</a>
+            ||
+            <a href="https://github.com/SwayamTripathy973/SwayamTripathy973.github.io">GitHub</a>
+            ||
+            <a href="https://swayamtripathy973.github.io/itis3135/index.html">ITIS3135.io</a>
+            ||
+            <a href="https://www.freecodecamp.org/swayamtripathy973">FreeCodeCamp</a>
+            ||
+            <a href="https://www.codecademy.com/profiles/swayamtripathy973">Codecademy</a>
+            ||
+            <a href="http://www.linkedin.com/in/swayam-tripathy">LinkedIn</a>
+        </nav>
+    </header>
 
     <main>
         <h2>Innovative Web Solutions</h2>
@@ -126,55 +148,5 @@
             </a>
         </p>
     </footer>
-
-    <div id="header-content" style="display: none;">
-        <div class="logo-container">
-            <div style="background-color: #f0f0f0; border-radius: 50%; padding: 15px; display: inline-block; margin-right: 20px;">
-                <img src="wmremove-transformed.jpeg" alt="Swayam Web Solutions Logo" style="max-width: 250px; height: auto; display: block;">
-            </div>
-            <h1>Tripathy Web Solutions</h1>
-        </div>
-        <nav>
-            <a href="https://webpages.charlotte.edu/swayamt/">Charlotte.edu</a>
-            ||
-            <a href="https://github.com/SwayamTripathy973/SwayamTripathy973.github.io">GitHub</a>
-            ||
-            <a href="https://swayamtripathy973.github.io/itis3135/index.html">ITIS3135.io</a>
-            ||
-            <a href="https://www.freecodecamp.org/swayamtripathy973">FreeCodeCamp</a>
-            ||
-            <a href="https://www.codecademy.com/profiles/swayamtripathy973">Codecademy</a>
-            ||
-            <a href="http://www.linkedin.com/in/swayam-tripathy">LinkedIn</a>
-        </nav>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function includeHTML() {
-                var z, i, elmnt, file, xhttp;
-                z = document.getElementsByTagName("*");
-                for (i = 0; i < z.length; i++) {
-                    elmnt = z[i];
-                    file = elmnt.getAttribute("data-include");
-                    if (file) {
-                        xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4) {
-                                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                                elmnt.removeAttribute("data-include");
-                                includeHTML();
-                            }
-                        }
-                        xhttp.open("GET", file.substring(1), true); // Remove the '#'
-                        xhttp.send();
-                        return;
-                    }
-                }
-            }
-            includeHTML();
-        });
-    </script>
 </body>
 </html>
