@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swayam Tripathy Web Solutions | Design & Development</title>
     <style>
-        /* (Your CSS styles remain the same) */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #edf2f7;
@@ -151,8 +151,9 @@
         }
     </style>
 </head>
+
 <body>
-    <header data-include="header.html"></header>
+    <header data-include="components/header.html"></header>
 
     <main>
         <h2>Innovative Web Solutions</h2>
@@ -178,8 +179,8 @@
             <h3>Let's Build Your Digital Success</h3>
             <p>Ready to elevate your online presence? Contact us today!</p>
             <p>
-                📧 Email: info@swayamtripathywebsolutions.co<br/>
-                📱 Phone: (704) 123-4567<br/>
+                📧 Email: info@swayamtripathywebsolutions.co<br />
+                📱 Phone: (704) 123-4567<br />
                 📍 Address: 9201 University City Blvd, Charlotte, NC 28223
             </p>
         </div>
@@ -204,13 +205,14 @@
                 <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88" />
             </a>
             <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener noreferrer">
-                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
             </a>
         </p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             function includeHTML() {
                 var z, i, elmnt, file, xhttp;
                 z = document.getElementsByTagName("*");
@@ -219,10 +221,14 @@
                     file = elmnt.getAttribute("data-include");
                     if (file) {
                         xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function () {
+                        xhttp.onreadystatechange = function() {
                             if (this.readyState == 4) {
-                                if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                                if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                                if (this.status == 200) {
+                                    elmnt.innerHTML = this.responseText;
+                                }
+                                if (this.status == 404) {
+                                    elmnt.innerHTML = "Page not found.";
+                                }
                                 elmnt.removeAttribute("data-include");
                                 includeHTML();
                             }
@@ -237,4 +243,5 @@
         });
     </script>
 </body>
+
 </html>
