@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Swayam Tripathy Web Solutions | Design & Development</title>
   <style>
-    /* Your existing styles preserved */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #edf2f7;
@@ -30,13 +29,16 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 10px;
+      flex-wrap: wrap;
     }
 
     .logo {
       margin-right: 20px;
       border-radius: 50%;
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: 100px;
+      max-width: 100%;
+      height: auto;
     }
 
     main {
@@ -85,6 +87,10 @@
       margin-top: 20px;
     }
 
+    footer p {
+      margin: 5px 0;
+    }
+
     nav {
       background-color: #f0f0f0;
       padding: 10px;
@@ -98,6 +104,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     nav li {
@@ -114,20 +121,23 @@
     }
   </style>
 </head>
-
 <body>
-  <!-- ✅ Make sure the file path is relative correctly (without leading slash unless root) -->
-  <header data-include="components/header.html"></header>
+  <header data-include="/itis3135/components/header.html"></header>
 
   <main>
     <div class="logo-container">
       <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" />
       <h1>Swayam Tripathy Web Solutions</h1>
     </div>
+
     <h2>Innovative Web Solutions</h2>
     <p>
-      Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship...
+      Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship.
+      We specialize in creating modern, responsive, and user-centric web experiences that empower
+      businesses to thrive online. Leveraging the latest web technologies and design principles,
+      we turn your digital vision into reality.
     </p>
+
     <ul class="services-list">
       <li>Custom Web Design & Development</li>
       <li>Responsive Mobile-First Solutions</li>
@@ -138,19 +148,19 @@
       <li>Web Application Development</li>
       <li>Digital Brand Strategy</li>
     </ul>
+
     <div class="contact-info">
       <h3>Let's Build Your Digital Success</h3>
       <p>Ready to elevate your online presence? Contact us today!</p>
       <p>
-        📧 Email: info@swayamtripathywebsolutions.co<br />
-        📱 Phone: (704) 123-4567<br />
+        📧 Email: info@swayamtripathywebsolutions.co<br/>
+        📱 Phone: (704) 123-4567<br/>
         📍 Address: 9201 University City Blvd, Charlotte, NC 28223
       </p>
     </div>
   </main>
 
-  <!-- ✅ Footer include works the same way -->
-  <footer data-include="components/footer.html"></footer>
+  <footer data-include="/itis3135/components/footer.html"></footer>
 
   <nav>
     <a href="https://webpages.charlotte.edu/swayamt/">Charlotte.edu</a> ||
@@ -162,9 +172,7 @@
   </nav>
 
   <p>
-    Page Built by
-    <a href="TripathyWebSolutions.com/index.html">Tripathy Web Solutions</a> |
-    &copy;2023
+    Page Built by <a href="TripathyWebSolutions.com/index.html">Tripathy Web Solutions</a> | &copy;2023
   </p>
 
   <p>
@@ -172,26 +180,35 @@
       <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88" />
     </a>
     <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener noreferrer">
-      <img style="border: 0; width: 88px; height: 31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+      <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
     </a>
   </p>
 
-  <!-- ✅ Cleaner JavaScript to dynamically include files -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const includes = document.querySelectorAll("[data-include]");
-      includes.forEach(async (el) => {
-        const file = el.getAttribute("data-include");
-        try {
-          const res = await fetch(file);
-          if (!res.ok) throw new Error("Page not found");
-          const text = await res.text();
-          el.innerHTML = text;
-          el.removeAttribute("data-include");
-        } catch (error) {
-          el.innerHTML = "Content failed to load.";
+    document.addEventListener('DOMContentLoaded', function () {
+      function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          file = elmnt.getAttribute("data-include");
+          if (file) {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+              if (this.readyState == 4) {
+                if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                elmnt.removeAttribute("data-include");
+                includeHTML();
+              }
+            }
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            return;
+          }
         }
-      });
+      }
+      includeHTML();
     });
   </script>
 </body>
