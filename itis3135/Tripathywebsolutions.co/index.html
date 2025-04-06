@@ -131,7 +131,8 @@
 
 <body>
     <div data-include="components/header.html">
-        <div class="loading-indicator">Loading Header...</div>
+        <div data-include="../components/header.html"></div>
+
     </div>
 
     <main>
@@ -171,41 +172,11 @@
     </main>
 
     <div data-include="components/footer.html">
-        <div class="loading-indicator">Loading Footer...</div>
+        <div data-include="../components/footer.html"></div>
+
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            function includeHTML() {
-                var z, i, elmnt, file, xhttp;
-                z = document.getElementsByTagName("*");
-                for (i = 0; i < z.length; i++) {
-                    elmnt = z[i];
-                    file = elmnt.getAttribute("data-include");
-                    if (file) {
-                        xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function () {
-                            if (this.readyState == 4) {
-                                if (this.status == 200) {
-                                    elmnt.innerHTML = this.responseText;
-                                }
-                                if (this.status == 404) {
-                                    elmnt.innerHTML = "Page not found.";
-                                }
-                                elmnt.removeAttribute("data-include");
-                                includeHTML();
-                            }
-                        }
-                        xhttp.open("GET", file, true);
-                        xhttp.send();
-                        return;
-                    }
-                }
-            }
-            includeHTML();
-        });
-    </script>
-
+    <script src="../scripts/HTMLInclude.js"></script>
     <nav>
         <a href="https://webpages.charlotte.edu/swayamt/">Charlotte.edu</a> ||
         <a href="https://github.com/SwayamTripathy973/SwayamTripathy973.github.io">GitHub</a> ||
@@ -227,6 +198,7 @@
             <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
         </a>
     </p>
+
 </body>
 
 </html>
