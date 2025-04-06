@@ -20,15 +20,21 @@
             color: #ffffff;
             padding: 20px;
             text-align: center;
+            display: flex; /* Add flex to the main header */
+            flex-direction: column; /* Stack logo and nav vertically */
+            align-items: center; /* Center items horizontally */
         }
         .logo-container {
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 10px; /* Add some space below the logo */
         }
         .logo {
             margin-right: 20px;
             border-radius: 50%;
+            width: 150px;
+            height: 150px;
         }
         main {
             padding: 20px;
@@ -76,8 +82,18 @@
             padding: 10px;
             text-align: center;
         }
-        nav a {
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav li {
             margin: 0 10px;
+        }
+        nav a {
             text-decoration: none;
             color: #333;
         }
@@ -89,9 +105,11 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" width="150" height="150">
+            <img src="wmremove-transformed_150x150.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo">
             <h1>Swayam Tripathy Web Solutions</h1>
         </div>
+        <div data-include="header-content.html">
+            </div>
     </header>
 
     <main>
