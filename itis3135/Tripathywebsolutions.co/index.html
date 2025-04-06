@@ -18,22 +18,19 @@
             background-color: #1a202c;
             color: #ffffff;
             padding: 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: flex; /* Use flexbox to align items horizontally */
+            align-items: center; /* Vertically center items */
+            justify-content: center; /* Center horizontally */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
         }
 
         .logo-container {
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
+            margin-right: 20px; /* Add spacing between logo and heading */
         }
 
         .logo {
-            margin-right: 20px;
             border-radius: 50%;
             width: 100px;
             height: 100px;
@@ -122,14 +119,14 @@
     </style>
 </head>
 <body>
-    <header data-include="components/header.html"></header>
-
-    <main>
+    <header>
         <div class="logo-container">
             <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" />
-            <h1>Swayam Tripathy Web Solutions</h1>
         </div>
+        <h1>Swayam Tripathy Web Solutions</h1>
+    </header>
 
+    <main>
         <h2>Innovative Web Solutions</h2>
         <p>
             Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship.
@@ -160,30 +157,29 @@
         </div>
     </main>
 
-    <footer data-include="components/footer.html"></footer>
+    <footer>
+        <nav>
+            <a href="https://webpages.charlotte.edu/swayamt/">Charlotte.edu</a> ||
+            <a href="https://github.com/SwayamTripathy973/SwayamTripathy973.github.io">GitHub</a> ||
+            <a href="https://swayamtripathy973.github.io/itis3135/index.html">ITIS3135.io</a> ||
+            <a href="https://www.freecodecamp.org/swayamtripathy973">FreeCodeCamp</a> ||
+            <a href="https://www.codecademy.com/profiles/swayamtripathy973">Codecademy</a> ||
+            <a href="http://www.linkedin.com/in/swayam-tripathy">LinkedIn</a>
+        </nav>
 
-    <nav>
-        <a href="https://webpages.charlotte.edu/swayamt/">Charlotte.edu</a> ||
-        <a href="https://github.com/SwayamTripathy973/SwayamTripathy973.github.io">GitHub</a> ||
-        <a href="https://swayamtripathy973.github.io/itis3135/index.html">ITIS3135.io</a> ||
-        <a href="https://www.freecodecamp.org/swayamtripathy973">FreeCodeCamp</a> ||
-        <a href="https://www.codecademy.com/profiles/swayamtripathy973">Codecademy</a> ||
-        <a href="http://www.linkedin.com/in/swayam-tripathy">LinkedIn</a>
-    </nav>
+        <p>
+            Page Built by <a href="TripathyWebSolutions.com/index.html">Tripathy Web Solutions</a> | &copy;2023
+        </p>
 
-    <p>
-        Page Built by <a href="TripathyWebSolutions.com/index.html">Tripathy Web Solutions</a> | &copy;2023
-    </p>
+        <p>
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener noreferrer">
+                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88" />
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener noreferrer">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+            </a>
+        </p>
+    </footer>
 
-    <p>
-        <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener noreferrer">
-            <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88" />
-        </a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener noreferrer">
-            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
-        </a>
-    </p>
-
-    <script src="scripts/HTMLInclude.js"></script>
-</body>
+    </body>
 </html>
