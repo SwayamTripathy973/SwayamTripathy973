@@ -1,157 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swayam Tripathy Web Solutions | Design & Development</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #edf2f7;
-      color: #2d3748;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #1a202c;
-      color: #ffffff;
-      padding: 20px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      margin-right: 20px;
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-      max-width: 100%;
-      height: auto;
-    }
-
-    main {
-      padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      color: #1a202c;
-      border-bottom: 2px solid #4a5568;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    .services-list {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-
-    .services-list li {
-      margin-bottom: 10px;
-    }
-
-    .contact-info {
-      background-color: #ffffff;
-      padding: 20px;
-      border: 1px solid #4a5568;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-
-    h3 {
-      color: #1a202c;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      background-color: #4a5568;
-      color: #ffffff;
-      padding: 10px;
-      text-align: center;
-      bottom: 0;
-      width: 100%;
-      box-sizing: border-box;
-      margin-top: 20px;
-    }
-
-    footer p {
-      margin: 5px 0;
-    }
-
-    nav {
-      background-color: #f0f0f0;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    nav li {
-      margin: 0 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swayam Tripathy Web Solutions | Design & Development</title>
+    <style>
+        /* Coolors Palette: https://coolors.co/palette/1a202c-2d3748-4a5568-edf2f7-ffffff */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #edf2f7;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1a202c;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .logo {
+            margin-right: 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #1a202c;
+            border-bottom: 2px solid #4a5568;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .services-list {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        .services-list li {
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #4a5568;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        h3 {
+            color: #1a202c;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #4a5568;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
-  <header data-include="../components/header.html"></header>
-
-  <main>
-    <div class="logo-container">
-      <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" />
-      <h1>Swayam Tripathy Web Solutions</h1>
-    </div>
-
-    <h2>Innovative Web Solutions</h2>
+    <header data-include="/itis3135/components/header.html"></header>
+    <main>
+        <div class="logo-container">
+            <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo">
+            <h1>Swayam Tripathy Web Solutions</h1>
+        </div>
+        <h2>Innovative Web Solutions</h2>
+        <p>Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship. We specialize in creating modern, responsive, and user-centric web experiences that empower businesses to thrive online. Leveraging the latest web technologies and design principles, we turn your digital vision into reality.</p>
+        <ul class="services-list">
+            <li>Custom Web Design & Development</li>
+            <li>Responsive Mobile-First Solutions</li>
+            <li>E-commerce Integration</li>
+            <li>User Experience (UX) Optimization</li>
+            <li>Search Engine Optimization (SEO)</li>
+            <li>Content Management Systems (CMS)</li>
+            <li>Web Application Development</li>
+            <li>Digital Brand Strategy</li>
+        </ul>
+        <div class="contact-info">
+            <h3>Let's Build Your Digital Success</h3>
+            <p>Ready to elevate your online presence? Contact us today!</p>
+            <p>
+                📧 Email: info@swayamtripathywebsolutions.co<br>
+                📱 Phone: (704) 123-4567<br>
+                📍 Address: 9201 University City Blvd, Charlotte, NC 28223
+            </p>
+        </div>
+    </main>
+    <footer data-include="/itis3135/components/footer.html"></footer>
+    <nav>
+        <a href="https://webpages.charlotte.edu/swayamt/">Charlotte.edu</a>
+        ||
+        <a href="https://github.com/SwayamTripathy973/SwayamTripathy973.github.io">GitHub</a>
+        ||
+        <a href="https://swayamtripathy973.github.io/itis3135/index.html">ITIS3135.io</a>
+        ||
+        <a href="https://www.freecodecamp.org/swayamtripathy973">FreeCodeCamp</a>
+        ||
+        <a href="https://www.codecademy.com/profiles/swayamtripathy973">Codecademy</a>
+        ||
+        <a href="http://www.linkedin.com/in/swayam-tripathy">LinkedIn</a>
+    </nav>
+    <p>Page Built by <a href="TripathyWebSolutions.com/index.html">Tripathy Web Solutions</a> | &copy;2023</p>
     <p>
-      Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship.
-      We specialize in creating modern, responsive, and user-centric web experiences that empower
-      businesses to thrive online. Leveraging the latest web technologies and design principles,
-      we turn your digital vision into reality.
+        <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener noreferrer">
+            <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener noreferrer">
+            <img style="border:0;width:88px;height:31px"
+                 src="https://jigsaw.w3.org/css-validator/images/vcss"
+                 alt="Valid CSS!" />
+        </a>
     </p>
-
-    <ul class="services-list">
-      <li>Custom Web Design & Development</li>
-      <li>Responsive Mobile-First Solutions</li>
-      <li>E-commerce Integration</li>
-      <li>User Experience (UX) Optimization</li>
-      <li>Search Engine Optimization (SEO)</li>
-      <li>Content Management Systems (CMS)</li>
-      <li>Web Application Development</li>
-      <li>Digital Brand Strategy</li>
-    </ul>
-
-    <div class="contact-info">
-      <h3>Let's Build Your Digital Success</h3>
-      <p>Ready to elevate your online presence? Contact us today!</p>
-      <p
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function includeHTML() {
+                var z, i, elmnt, file, xhttp;
+                z = document.getElementsByTagName("*");
+                for (i = 0; i < z.length; i++) {
+                    elmnt = z[i];
+                    file = elmnt.getAttribute("data-include");
+                    if (file) {
+                        xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                            if (this.readyState == 4) {
+                                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                                elmnt.removeAttribute("data-include");
+                                includeHTML();
+                            }
+                        }
+                        xhttp.open("GET", file, true);
+                        xhttp.send();
+                        return;
+                    }
+                }
+            }
+            includeHTML();
+        });
+    </script>
+</body>
+</html>
