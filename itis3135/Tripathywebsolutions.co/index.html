@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Swayam Tripathy Web Solutions | Design & Development</title>
     <style>
+        /* (Your CSS styles remain the same) */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #edf2f7;
@@ -18,16 +19,17 @@
             background-color: #1a202c;
             color: #ffffff;
             padding: 20px;
-            display: flex; /* Use flexbox to align items horizontally */
-            align-items: center; /* Vertically center items */
-            justify-content: center; /* Center horizontally */
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            margin-right: 20px; /* Add spacing between logo and heading */
+            margin-bottom: 10px;
         }
 
         .logo {
@@ -36,6 +38,37 @@
             height: 100px;
             max-width: 100%;
             height: auto;
+            margin-right: 20px;
+        }
+
+        header nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header nav li {
+            margin: 0 10px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
         }
 
         main {
@@ -88,13 +121,13 @@
             margin: 5px 0;
         }
 
-        nav {
+        footer nav {
             background-color: #f0f0f0;
             padding: 10px;
             text-align: center;
         }
 
-        nav ul {
+        footer nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
@@ -104,27 +137,22 @@
             flex-wrap: wrap;
         }
 
-        nav li {
+        footer nav li {
             margin: 0 10px;
         }
 
-        nav a {
+        footer nav a {
             text-decoration: none;
             color: #333;
         }
 
-        nav a:hover {
+        footer nav a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" />
-        </div>
-        <h1>Swayam Tripathy Web Solutions</h1>
-    </header>
+    <header data-include="header.html"></header>
 
     <main>
         <h2>Innovative Web Solutions</h2>
@@ -181,5 +209,32 @@
         </p>
     </footer>
 
-    </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function includeHTML() {
+                var z, i, elmnt, file, xhttp;
+                z = document.getElementsByTagName("*");
+                for (i = 0; i < z.length; i++) {
+                    elmnt = z[i];
+                    file = elmnt.getAttribute("data-include");
+                    if (file) {
+                        xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4) {
+                                if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                                if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                                elmnt.removeAttribute("data-include");
+                                includeHTML();
+                            }
+                        }
+                        xhttp.open("GET", file, true);
+                        xhttp.send();
+                        return;
+                    }
+                }
+            }
+            includeHTML();
+        });
+    </script>
+</body>
 </html>
