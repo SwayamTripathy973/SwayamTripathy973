@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Tiger's New Board Games | Home</title>
-    <link rel="stylesheet" href="styles/business.css">
+    <title>Swayam Tripathy Web Solutions | Design & Development</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
-        /* Styles to visually match the Tripathy Web Solutions header */
+        /* Coolors Palette: https://coolors.co/palette/1a202c-2d3748-4a5568-edf2f7-ffffff */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #edf2f7;
@@ -26,34 +26,58 @@
             justify-content: center;
             align-items: center;
         }
-        .logo-wrapper { /* New class to style the logo background */
-            background-color: #f0f0f0;
-            border-radius: 50%; /* Updated to match the original */
-            padding: 10px;
-            display: inline-block;
-            margin-right: 20px;
-        }
         .logo {
-            max-width: 150px;
-            height: auto;
-            display: block;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #1a202c;
+            border-bottom: 2px solid #4a5568;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .services-list {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        .services-list li {
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #4a5568;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        h3 {
+            color: #1a202c;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #4a5568;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        footer p {
+            margin: 5px 0;
         }
         nav {
             background-color: #f0f0f0;
             padding: 10px;
             text-align: center;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: inline-block; /* To center the ul */
-        }
-        nav li {
-            display: inline;
-            margin: 0 10px;
-        }
         nav a {
+            margin: 0 10px;
             text-decoration: none;
             color: #333;
         }
@@ -63,89 +87,62 @@
     </style>
 </head>
 <body>
-    <header data-include="../components/header.html"></header>
+    <header>
+        <div class="logo-container">
+            <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" width="150" height="150">
+            <h1>Swayam Tripathy Web Solutions</h1>
+        </div>
+    </header>
+
     <main>
-        <h2>Welcome to Super Tiger's New Board Games!</h2>
-        <p>At Super Tiger's New Board Games, we create exciting and engaging board games for older audiences. Tired of the same old boring games? Get ready to unleash your imagination with our unique, customizable board games that combine thrilling gameplay with the power of storytelling.</p>
-        <section class="features">
-            <h3>Our Special Services</h3>
-            <ul>
-                <li>Fantasy board games</li>
-                <li>Sci-fi board games</li>
-                <li>Action adventure games</li>
-                <li>Puzzle board games</li>
-            </ul>
-        </section>
+        <h2>Innovative Web Solutions</h2>
+        <p>Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship. We specialize in creating modern, responsive, and user-centric web experiences that empower businesses to thrive online. Leveraging the latest web technologies and design principles, we turn your digital vision into reality.</p>
+        <ul class="services-list">
+            <li>Custom Web Design & Development</li>
+            <li>Responsive Mobile-First Solutions</li>
+            <li>E-commerce Integration</li>
+            <li>User Experience (UX) Optimization</li>
+            <li>Search Engine Optimization (SEO)</li>
+            <li>Content Management Systems (CMS)</li>
+            <li>Web Application Development</li>
+            <li>Digital Brand Strategy</li>
+        </ul>
+        <div class="contact-info">
+            <h3>Let's Build Your Digital Success</h3>
+            <p>Ready to elevate your online presence? Contact us today!</p>
+            <p>
+                📧 Email: info@swayamtripathywebsolutions.co<br>
+                📱 Phone: (704) 123-4567<br>
+                📍 Address: 9201 University City Blvd, Charlotte, NC 28223
+            </p>
+        </div>
     </main>
-    <footer data-include="../components/footer.html"></footer>
-    <nav>
-        <a href="index.html">Home</a> ||
-        <a href="about.html">About</a> ||
-        <a href="../index.html">Course Home</a>
-    </nav>
-    <script>
-        /*! HTMLInclude v1.1.1 | MIT License | github.com/paul-browne/HTMLInclude */
-        !function(w, d) {
-            if (!w.HTMLInclude) {
-                w.HTMLInclude = function() {
-                    function isInViewport(element, offset) {
-                        return element.getBoundingClientRect().top <= (+offset + w.innerHeight);
-                    }
-                    function ajax(url, elements) {
-                        var xhr = new XMLHttpRequest();
-                        xhr.onreadystatechange = function() {
-                            if (xhr.readyState == 4 && xhr.status == 200) {
-                                elements.forEach(function(element) {
-                                    var dataReplace = element.getAttribute("data-replace");
-                                    var z = xhr.responseText;
-                                    if (dataReplace) {
-                                        dataReplace.split(",").forEach(function(el) {
-                                            var o = el.trim().split(":");
-                                            z = z.replace(new RegExp(o[0], "g"), o[1]);
-                                        });
-                                    }
-                                    element.outerHTML = z;
-                                    var scripts = new DOMParser().parseFromString(z, 'text/html').querySelectorAll("SCRIPT");
-                                    scripts.forEach(function(script) {
-                                        var clone = d.createElement("SCRIPT");
-                                        clone.text = script.innerHTML;
-                                        script.getAttributeNames().forEach(function(attr) {
-                                            clone.setAttribute(attr, script.getAttribute(attr));
-                                        });
-                                        d.head.appendChild(clone);
-                                        script.remove(clone);
-                                    });
-                                });
-                            }
-                        }
-                        xhr.open("GET", url, true);
-                        xhr.send();
-                    }
-                    function lazyLoad(element, offset) {
-                        w.addEventListener("scroll", function scrollFunc() {
-                            if (isInViewport(element, offset)) {
-                                w.removeEventListener("scroll", scrollFunc);
-                                ajax(element.getAttribute("data-include"), [element]);
-                            }
-                        });
-                    }
-                    var elements = d.querySelectorAll("[data-include]");
-                    elements.forEach(function(element) {
-                        var offset = element.getAttribute("data-offset");
-                        if (offset && !isInViewport(element, offset)) {
-                            lazyLoad(element, offset);
-                        } else {
-                            ajax(element.getAttribute("data-include"), [element]);
-                        }
-                    });
-                }
-            }
-            if (d.readyState === "complete" || d.readyState === "interactive") {
-                w.HTMLInclude();
-            } else {
-                d.addEventListener("DOMContentLoaded", w.HTMLInclude);
-            }
-        }(window, document);
-    </script>
+
+    <footer>
+        <nav>
+            <a href="https://webpages.charlotte.edu/swayamt/">Charlotte.edu</a>
+            ||
+            <a href="https://github.com/SwayamTripathy973/SwayamTripathy973.github.io">GitHub</a>
+            ||
+            <a href="https://swayamtripathy973.github.io/itis3135/index.html">ITIS3135.io</a>
+            ||
+            <a href="https://www.freecodecamp.org/swayamtripathy973">FreeCodeCamp</a>
+            ||
+            <a href="https://www.codecademy.com/profiles/swayamtripathy973">Codecademy</a>
+            ||
+            <a href="http://www.linkedin.com/in/swayam-tripathy">LinkedIn</a>
+        </nav>
+        <p>Page Built by <a href="TripathyWebSolutions.com/index.html">Tripathy Web Solutions</a> | &copy;2023</p>
+        <p>
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener noreferrer">
+                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener noreferrer">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+            </a>
+        </p>
+    </footer>
 </body>
 </html>
