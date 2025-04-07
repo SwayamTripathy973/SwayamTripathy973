@@ -1,4 +1,4 @@
-/*! HTMLInclude v1.1.1 | MIT License | github.com/paul-browne/HTMLInclude */
+/*! HTMLInclude v1.1.1 | MIT License | github.com/paul-browne/HTMLInclude */ 
 !function(w, d) {
     if (!w.HTMLInclude) {
         w.HTMLInclude = function() {
@@ -20,18 +20,17 @@
                             }
                             element.outerHTML = z;
                             var scripts = new DOMParser().parseFromString(z, 'text/html').querySelectorAll("SCRIPT");
-                            scripts.forEach(function(script) {
-                                var clone = d.createElement("SCRIPT");
-                                clone.text = script.innerHTML;
-                                script.getAttributeNames().forEach(function(attr) {
-                                    clone.setAttribute(attr, script.getAttribute(attr));
-                                });
-                                d.head.appendChild(clone);
-                                script.remove(clone);
-                            });
+                            var i = 0;
+                            var j = scripts.length;
+                            while (i < j) {
+                                var newScript = d.createElement("SCRIPT");
+                                scripts[i].src ? newScript.src = scripts[i].src : newScript.innerHTML = scripts[i].innerHTML;
+                                d.head.appendChild(newScript);
+                                i++;
+                            }
                         });
                     }
-                }
+                };
                 xhr.open("GET", url, true);
                 xhr.send();
             }
@@ -41,22 +40,26 @@
                         w.removeEventListener("scroll", scrollFunc);
                         ajax(element.getAttribute("data-include"), [element]);
                     }
-                });
+                })
             }
-            var elements = d.querySelectorAll("[data-include]");
-            elements.forEach(function(element) {
-                var offset = element.getAttribute("data-offset");
-                if (offset && !isInViewport(element, offset)) {
-                    lazyLoad(element, offset);
+            var store = {};
+            var dis = d.querySelectorAll('[data-include]:not([data-in])');
+            var i = dis.length;
+            while (i--) {
+                var di = dis[i].getAttribute('data-include');
+                var laziness = dis[i].getAttribute('data-lazy');
+                dis[i].setAttribute("data-in", "");
+                if (!laziness || (laziness && isInViewport(dis[i], laziness))) {
+                    store[di] = store[di] || [];
+                    store[di].push(dis[i]);
                 } else {
-                    ajax(element.getAttribute("data-include"), [element]);
+                    lazyLoad(dis[i], laziness);
                 }
-            });
+            }
+            for (var key in store) {
+                ajax(key, store[key]);
+            }
         }
     }
-    if (d.readyState === "complete" || d.readyState === "interactive") {
-        w.HTMLInclude();
-    } else {
-        d.addEventListener("DOMContentLoaded", w.HTMLInclude);
-    }
-}(window, document);
+    w.HTMLInclude();
+}(window, document)
