@@ -12,35 +12,35 @@
             padding: 0;
             overflow: hidden;
             background-color: #e0f2f7;
+            position: relative; /* Needed for absolute positioning of the body image */
         }
 
         body {
             display: flex;
             flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+        }
+
+        .body-logo-container {
+            position: absolute; /* Position the logo relative to the body */
+            top: 20px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            z-index: 10; /* Ensure it's above other content if needed */
+        }
+
+        .body-logo {
+            /* Add any specific styling for the body logo here */
+            width: 50px;
+            height: 50px;
         }
 
         header {
             background-color: #1e88e5;
             color: #fff;
-            padding: 0.5em 1em; /* Adjust padding for logo */
+            padding: 0.5em 1em;
             text-align: center;
-            display: flex; /* Enable flexbox for alignment */
-            align-items: center; /* Vertically align items */
-            justify-content: space-between; /* Space out logo and nav */
-        }
-
-        header .logo-header {
-            display: flex;
-            align-items: center;
-        }
-
-        header .logo {
-            margin-right: 10px;
-        }
-
-        header h1 {
-            margin: 0; /* Remove default heading margin */
-            font-size: 1.5em; /* Adjust font size as needed */
+            width: 100%; /* Make header full width */
         }
 
         header nav a {
@@ -54,21 +54,13 @@
         }
 
         main {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 80%;
-            margin: 20px auto;
+            padding: 20px;
+            margin-top: 80px; /* Adjust margin to prevent overlap with body logo */
+            margin-bottom: 20px;
             overflow: auto;
-        }
-
-        .logo-container {
-            display: none; /* Hide the logo from the main section */
         }
 
         h2, h3 {
@@ -100,24 +92,23 @@
             text-align: center;
             padding: 1em 0;
             width: 100%;
+            position: fixed; /* Stick footer to the bottom */
+            bottom: 0;
         }
     </style>
 </head>
 <body>
+    <div class="body-logo-container">
+        <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="body-logo" />
+    </div>
+
     <header data-include="../components/header.html">
-        <div class="logo-header">
-            <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" width="30" height="30" />
-            <h1>Swayam Tripathy Web Solutions</h1>
-        </div>
         <nav>
             <a href="/">Home</a> | <a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <div class="logo-container">
-            </div>
-
         <h2>Innovative Web Solutions</h2>
         <p>
             Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship.
@@ -148,7 +139,9 @@
         </div>
     </main>
 
-    <footer data-include="../components/footer.html"></footer>
+    <footer data-include="../components/footer.html">
+        <p>&copy; 2025 Swayam Tripathy Web Solutions | All Rights Reserved</p>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -182,7 +175,6 @@
         </template>
 
     <template id="footer-template">
-        <p>&copy; 2025 Swayam Tripathy Web Solutions | All Rights Reserved</p>
-    </template>
+        </template>
 </body>
 </html>
