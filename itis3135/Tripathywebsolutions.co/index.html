@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swayam Tripathy Web Solutions</title>
+    <title>Swayam Tripathy Web Solutions | ITIS3135</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         html, body {
-            height: 100%; /* Make html and body take full viewport height */
+            height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevent overall scrolling */
+            overflow: hidden;
             background-color: #e0f2f7; /* Light blue background */
         }
 
         body {
             display: flex;
-            flex-direction: column; /* Stack header, main, and footer vertically */
+            flex-direction: column;
         }
 
         header {
@@ -27,7 +27,7 @@
         }
 
         header nav a {
-            color: #fff;
+            color: black; /* Black links in header */
             margin: 0 1em;
             text-decoration: none;
         }
@@ -37,7 +37,7 @@
         }
 
         main {
-            flex-grow: 1; /* Allow main to take up remaining vertical space */
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -48,6 +48,7 @@
             width: 80%;
             margin: 20px auto;
             overflow: auto; /* Allow scrolling within main if its content overflows */
+            color: black; /* Default text color in main is black */
         }
 
         .logo-container {
@@ -62,7 +63,7 @@
         }
 
         h1, h2, h3 {
-            color: #1976d2; /* Darker blue headings */
+            color: #1976d2; /* Darker blue headings (can be changed to black if desired) */
         }
 
         .services-list {
@@ -77,19 +78,28 @@
         .contact-info {
             margin-top: 20px;
             text-align: left;
-            color: #1565c0; /* Even darker blue for contact info */
+            color: black; /* Black color for contact info text */
         }
 
         .contact-info h3 {
-            color: #1e88e5; /* Blue heading for contact info */
+            color: #1e88e5; /* Blue heading for contact info (can be changed to black) */
         }
 
         footer {
             background-color: #1e88e5; /* Blue footer */
-            color: #fff;
+            color: black; /* Black text in footer */
             text-align: center;
             padding: 1em 0;
             width: 100%;
+        }
+
+        footer a {
+            color: black; /* Black links in footer */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
