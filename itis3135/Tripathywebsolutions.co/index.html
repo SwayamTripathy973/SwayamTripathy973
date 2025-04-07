@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swayam Tripathy Web Solutions | ITIS3135</title>
+    <title>Swayam Tripathy Web Solutions</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         html, body {
-            height: 100%;
+            height: 100%; /* Make html and body take full viewport height */
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow: hidden; /* Prevent overall scrolling */
             background-color: #e0f2f7; /* Light blue background */
-            color: black; /* Default font color for the entire body */
         }
 
         body {
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* Stack header, main, and footer vertically */
         }
 
         header {
             background-color: #1e88e5; /* Blue header */
-            color: white; /* Keep header text white for contrast */
+            color: #fff;
             padding: 1em 0;
             text-align: center;
         }
 
         header nav a {
-            color: black; /* Black links in header */
+            color: #fff;
             margin: 0 1em;
             text-decoration: none;
         }
@@ -38,7 +37,7 @@
         }
 
         main {
-            flex-grow: 1;
+            flex-grow: 1; /* Allow main to take up remaining vertical space */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -46,7 +45,9 @@
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            /* color: black; Inherits from body */
+            width: 80%;
+            margin: 20px auto;
+            overflow: auto; /* Allow scrolling within main if its content overflows */
         }
 
         .logo-container {
@@ -61,7 +62,7 @@
         }
 
         h1, h2, h3 {
-            color: #1976d2; /* Darker blue headings (can be changed to black if desired) */
+            color: #1976d2; /* Darker blue headings */
         }
 
         .services-list {
@@ -76,28 +77,19 @@
         .contact-info {
             margin-top: 20px;
             text-align: left;
-            /* color: black; Inherits from body */
+            color: #1565c0; /* Even darker blue for contact info */
         }
 
         .contact-info h3 {
-            color: #1e88e5; /* Blue heading for contact info (can be changed to black) */
+            color: #1e88e5; /* Blue heading for contact info */
         }
 
         footer {
             background-color: #1e88e5; /* Blue footer */
-            color: black; /* Black text in footer */
+            color: #fff;
             text-align: center;
             padding: 1em 0;
             width: 100%;
-        }
-
-        footer a {
-            color: black; /* Black links in footer */
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -180,6 +172,5 @@
         <p>&copy; 2025 Swayam Tripathy Web Solutions | All Rights Reserved</p>
     </template>
 </body>
-</html>    </template>
-</body>
+</html></body>
 </html>
