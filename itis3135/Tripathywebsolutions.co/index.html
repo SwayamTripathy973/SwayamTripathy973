@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div data-include="components/header.html"></div>
+    <header data-include="components/header.html">
+        <h2>Welcome to Super Tiger's New Board Games!</h2>
+        <p>At Super Tiger's New Board Games, we create exciting and engaging board games for older audiences. Tired of the same old boring games? Get ready to unleash your imagination with our unique, customizable board games that combine thrilling gameplay with the power of storytelling.</p>
+        <section class="features">
+            <h3>Our Special Services</h3>
+            <ul>
+                <li>Fantasy board games</li>
+                <li>Sci-fi board games</li>
+                <li>Action adventure games</li>
+                <li>Puzzle board games</li>
+            </ul>
+        </section>
     </header>
 
     <main>
@@ -47,9 +57,36 @@
         </div>
     </main>
     <footer>
-        <div data-include="components/footer.html"></div>
+        <div data-include="components/footer.html">
+        </div>
     </footer>
 
-    <script src="../scripts/HTMLInclude.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function includeHTML() {
+                var z, i, elmnt, file, xhttp;
+                z = document.getElementsByTagName("*");
+                for (i = 0; i < z.length; i++) {
+                    elmnt = z[i];
+                    file = elmnt.getAttribute("data-include");
+                    if (file) {
+                        xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                            if (this.readyState == 4) {
+                                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                                elmnt.removeAttribute("data-include");
+                                includeHTML();
+                            }
+                        }
+                        xhttp.open("GET", file, true);
+                        xhttp.send();
+                        return;
+                    }
+                }
+            }
+            includeHTML();
+        });
+    </script>
 </body>
 </html>
