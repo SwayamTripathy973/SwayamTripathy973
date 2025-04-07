@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #e0f2f7; /* Light blue background */
+            overflow: hidden; /* Prevent scrolling */
         }
 
         header {
@@ -78,8 +79,6 @@
             color: #fff;
             text-align: center;
             padding: 1em 0;
-            position: fixed;
-            bottom: 0;
             width: 100%;
         }
     </style>
@@ -126,10 +125,6 @@
     <footer data-include="../components/footer.html"></footer>
 
     <script>
-        // This script is responsible for dynamically loading the header and footer.
-        // To make the main content static, we simply won't target the <main> element
-        // with this script. Only elements with the 'data-include' attribute
-        // (which are the header and footer) will be affected.
         document.addEventListener('DOMContentLoaded', function() {
             function includeHTML() {
                 var z, i, elmnt, file, xhttp;
