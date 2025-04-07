@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swayam's Homepage</title>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
         html {
             box-sizing: border-box;
         }
 
-        body, div, header, main, footer, nav, a, p, h1, h2, h3, span, section {
+        *, *::before, *::after { /* Apply box-sizing to all elements and pseudo-elements */
             box-sizing: inherit;
         }
 
@@ -56,21 +55,31 @@
             background-color: #555;
         }
 
-        main h1 {
-            background-color: white;
+        main {
             padding: 30px;
             margin: 30px auto;
             max-width: 800px;
+            background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         }
 
+        main h1 {
+            color: #333; /* Reset main h1 color */
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333; /* Reset main h1 border */
+            padding-bottom: 10px;
+            font-size: 2.5em; /* Adjust main h1 size if needed */
+        }
+
         main h2 {
             color: #dc3545; /* Red heading */
-            margin-top: 0;
+            margin-top: 30px; /* Add top margin for better spacing */
             margin-bottom: 20px;
             border-bottom: 2px solid #dc3545;
             padding-bottom: 10px;
+            font-size: 1.8em; /* Adjust main h2 size if needed */
         }
 
         main p {
@@ -112,40 +121,11 @@
             color: #f8f9fa; /* Light gray on hover */
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function includeHTML() {
-                var z, i, elmnt, file, xhttp;
-                z = document.getElementsByTagName("*");
-                for (i = 0; i < z.length; i++) {
-                    elmnt = z[i];
-                    file = elmnt.getAttribute("data-include");
-                    if (file) {
-                        xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState === 4) {
-                                if (this.status === 200) {
-                                    elmnt.innerHTML = this.responseText;
-                                }
-                                if (this.status === 404) {
-                                    elmnt.innerHTML = "Page not found.";
-                                }
-                                elmnt.removeAttribute("data-include");
-                                includeHTML(); // Call again to process nested includes
-                            }
-                        };
-                        xhttp.open("GET", file, true);
-                        xhttp.send();
-                        return; // Exit the loop and wait for the callback
-                    }
-                }
-            }
-            includeHTML();
-        });
-    </script>
 </head>
 <body>
-    <header data-include="components/header.html"></header>
+    <header>
+        <h1>Swayam's Homepage</h1>
+    </header>
     <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
@@ -153,10 +133,12 @@
         <a href="#">Contact</a>
     </nav>
     <main>
-        <h1>Welcome!</h1>  <p>This is my personal homepage with a new red style!</p>
+        <h1>Welcome!</h1> <p>This is my personal homepage with a new red style!</p>
+        <h2>Check out my other site</h2>
+        <p>Click the link below to explore my new board games website.</p>
         <a class="btn-link" href="NewBoardGames/index.html">Go to New Board Games site</a>
     </main>
-    <footer data-include="components/footer.html">
+    <footer>
         <nav>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
