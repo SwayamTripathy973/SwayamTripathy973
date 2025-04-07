@@ -5,25 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swayam Tripathy Web Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        header nav a {
+            color: #fff;
+            margin: 0 1em;
+            text-decoration: none;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            margin-right: 10px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services-list li {
+            margin-bottom: 0.5em;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header data-include="components/header.html">
-        <h2>Welcome to Super Tiger's New Board Games!</h2>
-        <p>At Super Tiger's New Board Games, we create exciting and engaging board games for older audiences. Tired of the same old boring games? Get ready to unleash your imagination with our unique, customizable board games that combine thrilling gameplay with the power of storytelling.</p>
-        <section class="features">
-            <h3>Our Special Services</h3>
-            <ul>
-                <li>Fantasy board games</li>
-                <li>Sci-fi board games</li>
-                <li>Action adventure games</li>
-                <li>Puzzle board games</li>
-            </ul>
-        </section>
-    </header>
+    <header data-include="components/header.html"></header>
 
     <main>
         <div class="logo-container">
-            <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" />
+            <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" width="50" height="50" />
             <h1>Swayam Tripathy Web Solutions</h1>
         </div>
 
@@ -56,10 +117,8 @@
             </p>
         </div>
     </main>
-    <footer>
-        <div data-include="components/footer.html">
-        </div>
-    </footer>
+
+    <footer data-include="components/footer.html"></footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -88,5 +147,15 @@
             includeHTML();
         });
     </script>
+
+    <template id="header-template">
+        <nav>
+            <a href="/">Home</a> | <a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a>
+        </nav>
+    </template>
+
+    <template id="footer-template">
+        <p>&copy; 2025 Swayam Tripathy Web Solutions | All Rights Reserved</p>
+    </template>
 </body>
 </html>
