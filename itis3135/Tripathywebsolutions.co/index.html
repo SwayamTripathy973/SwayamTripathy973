@@ -7,23 +7,40 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         html, body {
-            height: 100%; /* Make html and body take full viewport height */
+            height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevent overall scrolling */
-            background-color: #e0f2f7; /* Light blue background */
+            overflow: hidden;
+            background-color: #e0f2f7;
         }
 
         body {
             display: flex;
-            flex-direction: column; /* Stack header, main, and footer vertically */
+            flex-direction: column;
         }
 
         header {
-            background-color: #1e88e5; /* Blue header */
+            background-color: #1e88e5;
             color: #fff;
-            padding: 1em 0;
+            padding: 0.5em 1em; /* Adjust padding for logo */
             text-align: center;
+            display: flex; /* Enable flexbox for alignment */
+            align-items: center; /* Vertically align items */
+            justify-content: space-between; /* Space out logo and nav */
+        }
+
+        header .logo-header {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo {
+            margin-right: 10px;
+        }
+
+        header h1 {
+            margin: 0; /* Remove default heading margin */
+            font-size: 1.5em; /* Adjust font size as needed */
         }
 
         header nav a {
@@ -37,32 +54,25 @@
         }
 
         main {
-            flex-grow: 1; /* Allow main to take up remaining vertical space */
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Center content vertically (optional) */
+            justify-content: center;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 80%;
             margin: 20px auto;
-            overflow: auto; /* Allow scrolling within main if its content overflows */
+            overflow: auto;
         }
 
         .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
+            display: none; /* Hide the logo from the main section */
         }
 
-        .logo {
-            margin-right: 10px;
-        }
-
-        h1, h2, h3 {
-            color: #1976d2; /* Darker blue headings */
+        h2, h3 {
+            color: #1976d2;
         }
 
         .services-list {
@@ -77,15 +87,15 @@
         .contact-info {
             margin-top: 20px;
             text-align: left;
-            color: #1565c0; /* Even darker blue for contact info */
+            color: #1565c0;
         }
 
         .contact-info h3 {
-            color: #1e88e5; /* Blue heading for contact info */
+            color: #1e88e5;
         }
 
         footer {
-            background-color: #1e88e5; /* Blue footer */
+            background-color: #1e88e5;
             color: #fff;
             text-align: center;
             padding: 1em 0;
@@ -94,13 +104,19 @@
     </style>
 </head>
 <body>
-    <header data-include="../components/header.html"></header>
+    <header data-include="../components/header.html">
+        <div class="logo-header">
+            <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" width="30" height="30" />
+            <h1>Swayam Tripathy Web Solutions</h1>
+        </div>
+        <nav>
+            <a href="/">Home</a> | <a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a>
+        </nav>
+    </header>
 
     <main>
         <div class="logo-container">
-            <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" width="50" height="50" />
-            <h1>Swayam Tripathy Web Solutions</h1>
-        </div>
+            </div>
 
         <h2>Innovative Web Solutions</h2>
         <p>
@@ -163,10 +179,7 @@
     </script>
 
     <template id="header-template">
-        <nav>
-            <a href="/">Home</a> | <a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a>
-        </nav>
-    </template>
+        </template>
 
     <template id="footer-template">
         <p>&copy; 2025 Swayam Tripathy Web Solutions | All Rights Reserved</p>
