@@ -12,6 +12,7 @@
             padding: 0;
             overflow: hidden;
             background-color: #e0f2f7; /* Light blue background */
+            color: black; /* Default font color for the entire body */
         }
 
         body {
@@ -21,7 +22,7 @@
 
         header {
             background-color: #1e88e5; /* Blue header */
-            color: #fff;
+            color: white; /* Keep header text white for contrast */
             padding: 1em 0;
             text-align: center;
         }
@@ -45,10 +46,7 @@
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            margin: 20px auto;
-            overflow: auto; /* Allow scrolling within main if its content overflows */
-            color: black; /* Default text color in main is black */
+            /* color: black; Inherits from body */
         }
 
         .logo-container {
@@ -78,7 +76,7 @@
         .contact-info {
             margin-top: 20px;
             text-align: left;
-            color: black; /* Black color for contact info text */
+            /* color: black; Inherits from body */
         }
 
         .contact-info h3 {
