@@ -139,7 +139,36 @@
 </head>
 <body>
     <div id="header-container" class="content-loading"></div>
-    <main id="main-container" class="content-loading"></main>
+    
+    <main>
+        <h2>Innovative Web Solutions</h2>
+        <p>
+            Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship.
+            We specialize in creating modern, responsive, and user-centric web experiences that empower
+            businesses to thrive online. Leveraging the latest web technologies and design principles,
+            we turn your digital vision into reality.
+        </p>
+        <ul class="services-list">
+            <li>Custom Web Design & Development</li>
+            <li>Responsive Mobile-First Solutions</li>
+            <li>E-commerce Integration</li>
+            <li>User Experience (UX) Optimization</li>
+            <li>Search Engine Optimization (SEO)</li>
+            <li>Content Management Systems (CMS)</li>
+            <li>Web Application Development</li>
+            <li>Digital Brand Strategy</li>
+        </ul>
+        <div class="contact-info">
+            <h3>Let's Build Your Digital Success</h3>
+            <p>Ready to elevate your online presence? Contact us today!</p>
+            <p>
+                📧 Email: info@swayamtripathywebsolutions.co<br />
+                📱 Phone: (704) 123-4567<br />
+                📍 Address: 9201 University City Blvd, Charlotte, NC 28223
+            </p>
+        </div>
+    </main>
+
     <div id="footer-container" class="content-loading"></div>
 
     <script>
@@ -162,56 +191,11 @@
             }
         }
 
-        // Load all components when the page loads
+        // Load header and footer when the page loads
         document.addEventListener('DOMContentLoaded', () => {
-            // Load header
             loadContent('header-container', 'components/header.html');
-            
-            // Load main content
-            const mainContent = `
-                <h2>Innovative Web Solutions</h2>
-                <p>
-                    Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship.
-                    We specialize in creating modern, responsive, and user-centric web experiences that empower
-                    businesses to thrive online. Leveraging the latest web technologies and design principles,
-                    we turn your digital vision into reality.
-                </p>
-                <ul class="services-list">
-                    <li>Custom Web Design & Development</li>
-                    <li>Responsive Mobile-First Solutions</li>
-                    <li>E-commerce Integration</li>
-                    <li>User Experience (UX) Optimization</li>
-                    <li>Search Engine Optimization (SEO)</li>
-                    <li>Content Management Systems (CMS)</li>
-                    <li>Web Application Development</li>
-                    <li>Digital Brand Strategy</li>
-                </ul>
-                <div class="contact-info">
-                    <h3>Let's Build Your Digital Success</h3>
-                    <p>Ready to elevate your online presence? Contact us today!</p>
-                    <p>
-                        📧 Email: info@swayamtripathywebsolutions.co<br />
-                        📱 Phone: (704) 123-4567<br />
-                        📍 Address: 9201 University City Blvd, Charlotte, NC 28223
-                    </p>
-                </div>
-            `;
-            const mainElement = document.getElementById('main-container');
-            mainElement.innerHTML = mainContent;
-            mainElement.classList.remove('content-loading');
-            mainElement.classList.add('content-loaded');
-
-            // Load footer
             loadContent('footer-container', 'components/footer.html');
         });
-
-        // Optional: Function to dynamically update content
-        function updateContent(section, newContent) {
-            const element = document.getElementById(`${section}-container`);
-            element.innerHTML = newContent;
-            element.classList.remove('content-loading');
-            element.classList.add('content-loaded');
-        }
     </script>
 </body>
 </html>
