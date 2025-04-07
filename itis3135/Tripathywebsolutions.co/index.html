@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -125,22 +126,19 @@
             padding: 10px;
             color: #888;
         }
-
-        /* Added for dynamic loading */
-        .content-loading {
-            opacity: 0;
-            transition: opacity 0.3s ease-in;
-        }
-        
-        .content-loaded {
-            opacity: 1;
-        }
     </style>
 </head>
+
 <body>
-    <div id="header-container" class="content-loading"></div>
-    
+    <div data-include="components/header.html">
+        </div>
+
     <main>
+        <div class="logo-container">
+            <img src="wmremove-transformed.jpeg" alt="Swayam Tripathy Web Solutions Logo" class="logo" />
+            <h1>Swayam Tripathy Web Solutions</h1>
+        </div>
+
         <h2>Innovative Web Solutions</h2>
         <p>
             Welcome to Swayam Tripathy Web Solutions, where innovation meets digital craftsmanship.
@@ -148,6 +146,7 @@
             businesses to thrive online. Leveraging the latest web technologies and design principles,
             we turn your digital vision into reality.
         </p>
+
         <ul class="services-list">
             <li>Custom Web Design & Development</li>
             <li>Responsive Mobile-First Solutions</li>
@@ -158,6 +157,7 @@
             <li>Web Application Development</li>
             <li>Digital Brand Strategy</li>
         </ul>
+
         <div class="contact-info">
             <h3>Let's Build Your Digital Success</h3>
             <p>Ready to elevate your online presence? Contact us today!</p>
@@ -169,33 +169,10 @@
         </div>
     </main>
 
-    <div id="footer-container" class="content-loading"></div>
+    <div data-include="components/footer.html">
+        </div>
 
-    <script>
-        // Function to fetch and insert HTML content
-        async function loadContent(elementId, filePath) {
-            try {
-                const response = await fetch(filePath);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const content = await response.text();
-                const element = document.getElementById(elementId);
-                element.innerHTML = content;
-                element.classList.remove('content-loading');
-                element.classList.add('content-loaded');
-            } catch (error) {
-                console.error(`Error loading ${filePath}:`, error);
-                document.getElementById(elementId).innerHTML = 
-                    `<p class="loading-indicator">Failed to load content: ${error.message}</p>`;
-            }
-        }
-
-        // Load header and footer when the page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            loadContent('header-container', 'components/header.html');
-            loadContent('footer-container', 'components/footer.html');
-        });
-    </script>
+    <script src="../scripts/HTMLInclude.js"></script>
 </body>
+
 </html>
