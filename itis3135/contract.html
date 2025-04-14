@@ -1,13 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swayam Tripathy | ITIS3135 | Contract</title>
-    <link rel="stylesheet" href="styles/default.css">
-    <script src="scripts/validator.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .background-info {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .background-info h3 {
+            color: #28a745;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .background-info p {
+            margin-bottom: 10px;
+        }
+
+        .loading-indicator {
+            text-align: center;
+            padding: 10px;
+            font-style: italic;
+            color: #777;
+        }
+
+        .validation-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .validation-section p {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .validation-button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            background-color: #000000;
+            color: #007bff;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+        }
+
+        .validation-button:hover {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #000000;
+        }
+    </style>
 </head>
 <body>
-    <div data-include="components/header.html"></div>
+    <div data-include="components/header.html">
+        <div class="loading-indicator">Loading Header...</div>
+    </div>
+    
     <main>
         <h2>Contract</h2>
         <p>I, <a href="introduction.html">Swayam Tripathy</a> agree to abide by the terms in my Spring 2024 ITIS3135 Web Application Design and Development with my instructor, D.I. von Briesen.</p>
@@ -15,6 +96,19 @@
         <p>I also understand that it is my work that counts for attendance, not logins or showing up for class. As such, failure to turn in assignments may show as absences.</p>
         <p>Signed: <em>Swayam Tripathy</em>, 03/07/2025</p>
     </main>
+
+    <div class="validation-section">
+        <p><strong>Validate This Page:</strong></p>
+        <!-- HTML Validation -->
+        <a class="validation-button" href="https://validator.w3.org/check?uri=https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/contract.html" target="_blank">
+            Validate HTML
+        </a>
+        <!-- CSS Validation -->
+        <a class="validation-button" href="https://jigsaw.w3.org/css-validator/validator?uri=https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/contract.html&profile=css3" target="_blank">
+            Validate CSS
+        </a>
+    </div>
+
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.js"></script>
 </body>
