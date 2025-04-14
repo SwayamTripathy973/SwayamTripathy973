@@ -5,6 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swayam Tripathy | ITIS3135 | Introduction</title>
     <link rel="stylesheet" href="styles/default.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Add space below main content */
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .background-info {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .background-info h3 {
+            color: #28a745;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .background-info p {
+            margin-bottom: 10px;
+        }
+
+        .background-info ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .background-info li {
+            margin-bottom: 5px;
+        }
+
+        .background-info strong {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .loading-indicator {
+            text-align: center;
+            padding: 10px;
+            font-style: italic;
+            color: #777;
+        }
+
+        .validation-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            border-top: 1px solid #eee; /* Separator */
+        }
+
+        .validation-section p {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .validation-button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none; /* To remove default link styling */
+        }
+
+        .validation-button:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div data-include="components/header.html">
@@ -15,7 +107,7 @@
         <h2>Swayam Tripathy</h2>
         <section class="background-info">
             <h3>Personal Background</h3>
-            <p>I was born in Minnesota and moved around a lot with my parents before they settled here. I chose UNC Charlotte because of the strong Computer Science program as well as additional facilities like the gym, clubs, and career center that will help me become a stronger person. One thing that was&nbsp; intresting&nbsp; was how I got into computer science. I was playing video games and realized that the certain elements of the game i was playing was increadibly similar and had specfic patterns and I reasearched how to do that.</p>
+            <p>I was born in Minnesota and moved around a lot with my parents before they settled here. I chose UNC Charlotte because of the strong Computer Science program as well as additional facilities like the gym, clubs, and career center that will help me become a stronger person. One thing that was&nbsp;interesting&nbsp; was how I got into computer science. I was playing video games and realized that the certain elements of the game I was playing were incredibly similar and had specific patterns, and I researched how to do that.</p>
             <h3>Professional Background</h3>
             <p>I have experience in Java, Python, and C++. I am good at working in teams for projects in computer science as well as figuring out problems with code.</p>
             <h3>Academic Background</h3>
@@ -27,10 +119,15 @@
                 <li><strong>ITIS 3135 - Web-Based Application Design & Development:</strong> In order to learn how to code websites so I can gain real experience on real projects.</li>
                 <li><strong>ITSC 3146 - European History & Learning:</strong> To understand history and learn about different cultures.</li>
                 <li><strong>ITSC 3155 - Web-Based Security:</strong> In order to help me grow and build my projects securely.</li>
-                <li><strong>STAT 2122 - Computer and Impact on Society & Survive Corporate:</strong> To learn about the impact of computers and strive in that department.</li>
+                <li><strong>STAT 2122 - Computer and Impact on Society & Survive Corporate:</strong> To learn about the impact of computers and thrive in that department.</li>
             </ul>
         </section>
     </main>
+    <div class="validation-section">
+        <p><strong>Validate Your Code:</strong></p>
+        <a class="validation-button" href="https://validator.w3.org/check?uri=referer" target="_blank">Validate HTML</a>
+        <a class="validation-button" href="https://jigsaw.w3.org/css-validator/validator?uri=referer&profile=css3" target="_blank">Validate CSS</a>
+    </div>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.js"></script>
 </body>
