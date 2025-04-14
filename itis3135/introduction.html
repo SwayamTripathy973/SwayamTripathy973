@@ -1,157 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swayam Tripathy | ITIS3135 | Introduction</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      background-color: #f4f4f4;
-      color: #333;
-    }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swayam Tripathy | ITIS3135 | Introduction</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #000000; /* Black background */
+            color: #007bff; /* Blue text */
+        }
 
-    main {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
+        main {
+            background-color: #000000; /* Black background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+            margin-bottom: 20px;
+            border: 1px solid #007bff; /* Blue border */
+        }
 
-    h2 {
-      color: #007bff;
-      margin-bottom: 15px;
-      text-align: center;
-    }
+        h2 {
+            color: #007bff; /* Blue text */
+            margin-bottom: 15px;
+            text-align: center;
+        }
 
-    .background-info {
-      margin-top: 20px;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      background-color: #f9f9f9;
-    }
+        a {
+            color: #007bff; /* Blue link color */
+            text-decoration: underline;
+        }
 
-    .background-info h3 {
-      color: #28a745;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
+        a:hover {
+            color: #add8e6; /* Light blue on hover */
+        }
 
-    .background-info p {
-      margin-bottom: 10px;
-    }
+        .background-info {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #007bff; /* Blue border */
+            border-radius: 5px;
+            background-color: #000000; /* Black background */
+        }
 
-    .background-info ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
+        .background-info h3 {
+            color: #add8e6; /* Light blue heading */
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
 
-    .background-info li {
-      margin-bottom: 5px;
-    }
+        .background-info p {
+            margin-bottom: 10px;
+            color: #007bff; /* Blue text */
+        }
 
-    .background-info strong {
-      font-weight: bold;
-      color: #000;
-    }
+        .background-info ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #007bff; /* Blue text */
+        }
 
-    .loading-indicator {
-      text-align: center;
-      padding: 10px;
-      font-style: italic;
-      color: #777;
-    }
+        .background-info li {
+            margin-bottom: 5px;
+            color: #007bff; /* Blue text */
+        }
 
-    .validation-section {
-      text-align: center;
-      margin-top: 30px;
-      padding: 15px;
-      border-top: 1px solid #eee;
-    }
+        .background-info strong {
+            font-weight: bold;
+            color: #add8e6; /* Light blue bold text */
+        }
 
-    .validation-section p {
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: #555;
-    }
+        .loading-indicator {
+            text-align: center;
+            padding: 10px;
+            font-style: italic;
+            color: #add8e6; /* Light blue loading text */
+        }
 
-    .validation-button {
-      padding: 10px 20px;
-      margin: 0 10px;
-      border: 1px solid #000000;
-      border-radius: 5px;
-      background-color: #000000;
-      color: #007bff;
-      cursor: pointer;
-      font-size: 1em;
-      text-decoration: none;
-    }
+        .validation-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            border-top: 1px solid #007bff; /* Blue separator */
+        }
 
-    .validation-button:hover {
-      background-color: #007bff;
-      border-color: #007bff;
-      color: #000000;
-    }
-  </style>
+        .validation-section p {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #add8e6; /* Light blue validation text */
+        }
+
+        .validation-button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: 1px solid #007bff; /* Blue border */
+            border-radius: 5px;
+            background-color: #000000; /* Black background */
+            color: #007bff; /* Blue text */
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+        }
+
+        .validation-button:hover {
+            background-color: #007bff; /* Blue background on hover */
+            border-color: #000000; /* Black border on hover */
+            color: #000000; /* Black text on hover */
+        }
+    </style>
 </head>
 <body>
-  <div data-include="components/header.html">
-    <div class="loading-indicator">Loading Header...</div>
-  </div>
+    <div data-include="components/header.html">
+        <div class="loading-indicator">Loading Header...</div>
+    </div>
 
-  <main>
-    <h2>Introduction</h2>
-    <h2>Swayam Tripathy</h2>
-    <section class="background-info">
-      <h3>Personal Background</h3>
-      <p>
-        I was born in Minnesota and moved around a lot with my parents before they settled here.
-        I chose UNC Charlotte because of the strong Computer Science program as well as additional facilities
-        like the gym, clubs, and career center that will help me become a stronger person.
-        One thing that was interesting was how I got into computer science. I was playing video games and realized
-        that certain elements of the game I was playing were incredibly similar and had specific patterns,
-        and I researched how to do that.
-      </p>
+    <main>
+        <h2>Introduction</h2>
+        <h2>Swayam Tripathy</h2>
+        <section class="background-info">
+            <h3>Personal Background</h3>
+            <p>
+                I was born in Minnesota and moved around a lot with my parents before they settled here.
+                I chose UNC Charlotte because of the strong Computer Science program as well as additional facilities
+                like the gym, clubs, and career center that will help me become a stronger person.
+                One thing that was interesting was how I got into computer science. I was playing video games and realized
+                that certain elements of the game I was playing were incredibly similar and had specific patterns,
+                and I researched how to do that.
+            </p>
 
-      <h3>Professional Background</h3>
-      <p>
-        I have experience in Java, Python, and C++. I am good at working in teams for projects in computer
-        science as well as figuring out problems with code.
-      </p>
+            <h3>Professional Background</h3>
+            <p>
+                I have experience in Java, Python, and C++. I am good at working in teams for projects in computer
+                science as well as figuring out problems with code.
+            </p>
 
-      <h3>Academic Background</h3>
-      <p>I'm a sophomore at UNCC in Computer Science and plan to major in cybersecurity.</p>
+            <h3>Academic Background</h3>
+            <p>I'm a sophomore at UNCC in Computer Science and plan to major in cybersecurity.</p>
 
-      <h3>Primary Computer Platform</h3>
-      <p>MacBook</p>
+            <h3>Primary Computer Platform</h3>
+            <p>MacBook</p>
 
-      <h3>Courses I'm Taking, & Why</h3>
-      <ul>
-        <li><strong>ITIS 3135 - Web-Based Application Design & Development:</strong> In order to learn how to code websites so I can gain real experience on real projects.</li>
-        <li><strong>ITSC 3146 - European History & Learning:</strong> To understand history and learn about different cultures.</li>
-        <li><strong>ITSC 3155 - Web-Based Security:</strong> In order to help me grow and build my projects securely.</li>
-        <li><strong>STAT 2122 - Computer and Impact on Society & Survive Corporate:</strong> To learn about the impact of computers and thrive in that department.</li>
-      </ul>
-    </section>
-  </main>
+            <h3>Courses I'm Taking, & Why</h3>
+            <ul>
+                <li><strong>ITIS 3135 - Web-Based Application Design & Development:</strong> In order to learn how to code websites so I can gain real experience on real projects.</li>
+                <li><strong>ITSC 3146 - European History & Learning:</strong> To understand history and learn about different cultures.</li>
+                <li><strong>ITSC 3155 - Web-Based Security:</strong> In order to help me grow and build my projects securely.</li>
+                <li><strong>STAT 2122 - Computer and Impact on Society & Survive Corporate:</strong> To learn about the impact of computers and thrive in that department.</li>
+            </ul>
+        </section>
+    </main>
 
-  <div class="validation-section">
-    <p><strong>Validate This Page:</strong></p>
-    <!-- HTML Validation -->
-    <a class="validation-button" href="https://validator.w3.org/check?uri=https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/introduction.html" target="_blank">
-      Validate HTML
-    </a>
-    <!-- CSS Validation (Validates the same page, not a missing CSS file) -->
-    <a class="validation-button" href="https://jigsaw.w3.org/css-validator/validator?uri=https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/introduction.html&profile=css3" target="_blank">
-      Validate CSS
-    </a>
-  </div>
+    <div class="validation-section">
+        <p><strong>Validate This Page:</strong></p>
+        <a class="validation-button" href="https://validator.w3.org/check?uri=https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/introduction.html" target="_blank">
+            Validate HTML
+        </a>
+        <a class="validation-button" href="https://jigsaw.w3.org/css-validator/validator?uri=https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/introduction.html&profile=css3" target="_blank">
+            Validate CSS
+        </a>
+    </div>
 
-  <div data-include="components/footer.html"></div>
-  <script src="scripts/HTMLInclude.js"></script>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.js"></script>
 </body>
 </html>
