@@ -4,13 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BYO Intro</title>
-    <link rel="stylesheet" href="styles/default.css">
-    <link rel="stylesheet" href="styles/byo_intro.css">
-    <script src="scripts/header.js"></script>
-    <script src="scripts/survey.js" defer></script>
+    <style>
+        /* styles/byo_intro.css */
+        #introForm fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #introForm legend {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+        }
+
+        #introForm div {
+            margin-bottom: 10px;
+        }
+
+        #introForm label {
+            display: inline-block;
+            width: 200px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        #introForm input[type="text"],
+        #introForm input[type="file"],
+        #introForm textarea {
+            width: 60%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #introForm textarea {
+            resize: vertical;
+        }
+
+        #introForm input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        #introForm button[type="submit"],
+        #introForm button[type="reset"],
+        #addCourse {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            margin-right: 10px;
+        }
+
+        #introForm button[type="reset"] {
+            background-color: #dc3545;
+        }
+
+        #addCourse {
+            background-color: #28a745;
+        }
+
+        #courseInputs div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        #courseInputs input[type="text"] {
+            flex-grow: 1;
+            margin-right: 5px;
+        }
+
+        #courseInputs button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #6c757d;
+            color: white;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        .error {
+            color: red;
+            display: block;
+            margin-top: 5px;
+        }
+
+        #introductionResult {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        #introductionResult h2 {
+            margin-top: 0;
+        }
+
+        #introductionResult ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #introductionResult li {
+            margin-bottom: 8px;
+        }
+
+        #introductionResult img {
+            display: block;
+            margin: 10px 0;
+            border: 1px solid #eee;
+            box-shadow: 2px 2px 5px #ccc;
+        }
+
+        #resetResult {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        #resetResult:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <div data-include="components/header.html"></div>
+    <header>
+        <h1>Your Website Title</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="byo_intro.html">BYO Intro</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <h2>BYO Intro</h2>
@@ -96,9 +236,139 @@
         </div>
     </main>
 
-    <div data-include="components/footer.html"></div>
+    <footer>
+        <p>&copy; 2025 Your Name</p>
+    </footer>
+
     <script>
-        loadHeaderFooter();
+        document.addEventListener('DOMContentLoaded', function() {
+            const introForm = document.getElementById('introForm');
+            const introductionResult = document.getElementById('introductionResult');
+            const resultContent = document.getElementById('resultContent');
+            const resetResultButton = document.getElementById('resetResult');
+            const addCourseButton = document.getElementById('addCourse');
+            const courseInputsDiv = document.getElementById('courseInputs');
+
+            // Function to prevent form submission if required fields are empty
+            function validateForm() {
+                let isValid = true;
+                const requiredFields = introForm.querySelectorAll('[required]');
+                requiredFields.forEach(field => {
+                    const errorSpan = document.getElementById(field.id + 'Error');
+                    if (field.type === 'checkbox' && !field.checked) {
+                        isValid = false;
+                        if (errorSpan) errorSpan.textContent = 'Please agree to the terms.';
+                    } else if (field.value.trim() === '') {
+                        isValid = false;
+                        if (errorSpan) errorSpan.textContent = 'This field is required.';
+                    } else if (field.type === 'file') {
+                        const allowedExtensions = /(\.png|\.jpg|\.jpeg)$/i;
+                        if (!allowedExtensions.exec(field.value)) {
+                            isValid = false;
+                            if (errorSpan) errorSpan.textContent = 'Please upload a PNG or JPG file.';
+                        } else {
+                            if (errorSpan) errorSpan.textContent = '';
+                        }
+                    } else {
+                        if (errorSpan) errorSpan.textContent = '';
+                    }
+                });
+                return isValid;
+            }
+
+            // Function to handle adding new course input fields
+            addCourseButton.addEventListener('click', function() {
+                const newCourseInput = document.createElement('input');
+                newCourseInput.type = 'text';
+                newCourseInput.name = 'courses[]';
+                newCourseInput.placeholder = `Course ${courseInputsDiv.children.length + 1}`;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.type = 'button';
+                deleteButton.textContent = 'Delete';
+                deleteButton.addEventListener('click', function() {
+                    courseInputsDiv.removeChild(newCourseInput);
+                    if (courseInputsDiv.children.length === 0) {
+                        const existingDeleteButtons = courseInputsDiv.querySelectorAll('button');
+                        existingDeleteButtons.forEach(btn => btn.remove());
+                    }
+                });
+
+                const courseDiv = document.createElement('div');
+                courseDiv.appendChild(newCourseInput);
+                courseDiv.appendChild(deleteButton);
+                courseInputsDiv.appendChild(courseDiv);
+            });
+
+            // Function to gather form data and display the introduction
+            introForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                if (validateForm()) {
+                    const formData = new FormData(introForm);
+                    let introductionHTML = '<ul>';
+                    introductionHTML += `<li><strong>Name:</strong> ${formData.get('name')}</li>`;
+                    introductionHTML += `<li><strong>Mascot:</strong> ${formData.get('mascot')}</li>`;
+
+                    const imageFile = formData.get('image');
+                    if (imageFile) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            introductionHTML += `<li><img src="${e.target.result}" alt="${formData.get('caption')}" style="max-width: 300px;"></li>`;
+                            introductionHTML += `<li><strong>Image Caption:</strong> ${formData.get('caption')}</li>`;
+                            introductionHTML += `<li><strong>Personal Background:</strong> ${formData.get('personalBackground')}</li>`;
+                            introductionHTML += `<li><strong>Professional Background:</strong> ${formData.get('professionalBackground')}</li>`;
+                            introductionHTML += `<li><strong>Academic Background:</strong> ${formData.get('academicBackground')}</li>`;
+                            introductionHTML += `<li><strong>Background in Web Development:</strong> ${formData.get('webDevBackground')}</li>`;
+                            introductionHTML += `<li><strong>Primary Computer Platform:</strong> ${formData.get('computerPlatform')}</li>`;
+
+                            const courses = formData.getAll('courses[]');
+                            if (courses.length > 0 && courses[0] !== '') {
+                                introductionHTML += '<li><strong>Courses currently taking:</strong><ul>';
+                                courses.forEach(course => {
+                                    introductionHTML += `<li>${course}</li>`;
+                                });
+                                introductionHTML += '</ul></li>';
+                            }
+
+                            const funnyThing = formData.get('funnyThing');
+                            if (funnyThing) {
+                                introductionHTML += `<li><strong>Funny thing?</strong> ${funnyThing}</li>`;
+                            }
+
+                            const anythingElse = formData.get('anythingElse');
+                            if (anythingElse) {
+                                introductionHTML += `<li><strong>Anything else?</strong> ${anythingElse}</li>`;
+                            }
+
+                            introductionHTML += '</ul>';
+                            resultContent.innerHTML = introductionHTML;
+                            introForm.style.display = 'none';
+                            introductionResult.style.display = 'block';
+                        }
+                        reader.readAsDataURL(imageFile);
+                    }
+                }
+            });
+
+            // Function to reset the form and the result
+            resetResultButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                introForm.reset();
+                resultContent.innerHTML = '';
+                introductionResult.style.display = 'none';
+                introForm.style.display = 'block';
+
+                // Clear dynamically added course fields
+                courseInputsDiv.innerHTML = '<input type="text" name="courses[]" placeholder="Course 1">';
+            });
+
+            // Function to reset the form
+            introForm.addEventListener('reset', function() {
+                const errorSpans = document.querySelectorAll('.error');
+                errorSpans.forEach(span => span.textContent = '');
+                courseInputsDiv.innerHTML = '<input type="text" name="courses[]" placeholder="Course 1">';
+            });
+        });
     </script>
 </body>
 </html>
