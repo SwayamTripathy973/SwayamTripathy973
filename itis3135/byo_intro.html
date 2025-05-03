@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYO Intro</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/byo_intro.css">
+    <script src="scripts/header.js"></script>
+    <script src="scripts/survey.js" defer></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>BYO Intro</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+
+        <form id="introForm">
+            <fieldset>
+                <legend>Your Information</legend>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="Your Name" required>
+                    <span class="error" id="nameError"></span>
+                </div>
+                <div>
+                    <label for="mascot">Mascot:</label>
+                    <input type="text" id="mascot" name="mascot" value="Your Mascot" required>
+                    <span class="error" id="mascotError"></span>
+                </div>
+                <div>
+                    <label for="image">Image:</label>
+                    <input type="file" id="image" name="image" accept=".png, .jpg, .jpeg" required>
+                    <span class="error" id="imageError"></span>
+                </div>
+                <div>
+                    <label for="caption">Image Caption:</label>
+                    <input type="text" id="caption" name="caption" value="Caption for your image" required>
+                    <span class="error" id="captionError"></span>
+                </div>
+                <div>
+                    <label for="personalBackground">Personal Background:</label>
+                    <textarea id="personalBackground" name="personalBackground" rows="4" cols="50" required>Tell us a bit about yourself...</textarea>
+                    <span class="error" id="personalBackgroundError"></span>
+                </div>
+                <div>
+                    <label for="professionalBackground">Professional Background:</label>
+                    <textarea id="professionalBackground" name="professionalBackground" rows="4" cols="50" required>Your professional experiences...</textarea>
+                    <span class="error" id="professionalBackgroundError"></span>
+                </div>
+                <div>
+                    <label for="academicBackground">Academic Background:</label>
+                    <textarea id="academicBackground" name="academicBackground" rows="4" cols="50" required>Your educational journey...</textarea>
+                    <span class="error" id="academicBackgroundError"></span>
+                </div>
+                <div>
+                    <label for="webDevBackground">Background in Web Development:</label>
+                    <textarea id="webDevBackground" name="webDevBackground" rows="4" cols="50" required>Your experience with web development...</textarea>
+                    <span class="error" id="webDevBackgroundError"></span>
+                </div>
+                <div>
+                    <label for="computerPlatform">Primary Computer Platform:</label>
+                    <input type="text" id="computerPlatform" name="computerPlatform" value="Your primary OS" required>
+                    <span class="error" id="computerPlatformError"></span>
+                </div>
+                <div id="courses">
+                    <label>Courses currently taking:</label>
+                    <div id="courseInputs">
+                        <input type="text" name="courses[]" placeholder="Course 1">
+                    </div>
+                    <button type="button" id="addCourse">Add Course</button>
+                </div>
+                <div>
+                    <label for="funnyThing">Funny thing?</label>
+                    <textarea id="funnyThing" name="funnyThing" rows="2" cols="50">Share something funny...</textarea>
+                </div>
+                <div>
+                    <label for="anythingElse">Anything else?</label>
+                    <textarea id="anythingElse" name="anythingElse" rows="2" cols="50">Anything else you'd like to share?</textarea>
+                </div>
+                <div>
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label>
+                    <span class="error" id="agreementError"></span>
+                </div>
+            </fieldset>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <div id="introductionResult" style="display: none;">
+            <h2>Your Introduction</h2>
+            <div id="resultContent"></div>
+            <p><a href="#" id="resetResult">Reset</a></p>
+        </div>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script>
+        loadHeaderFooter();
+    </script>
+</body>
+</html>
