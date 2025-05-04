@@ -30,7 +30,84 @@
         <h3 class="heading-tertiary">Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
 
         <form id="introForm" onsubmit="return handleSubmit(event)">
-            </form>
+            <div class="form-group">
+                <label for="name"><strong>Name:</strong></label>
+                <input type="text" id="name" name="name" required value="Swayam Tripathy">
+            </div>
+
+            <div class="form-group">
+                <label for="mascot"><strong>Mascot:</strong></label>
+                <input type="text" id="mascot" name="mascot" required value="Awesome Mascot">
+            </div>
+
+            <div class="form-group">
+                <label for="image"><strong>Image:</strong></label>
+                <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png" required>
+            </div>
+
+            <div class="form-group">
+                <label for="imageCaption"><strong>Image Caption:</strong></label>
+                <input type="text" id="imageCaption" name="imageCaption" required value="A cool image caption">
+            </div>
+
+            <div class="form-group">
+                <label for="personalBackground"><strong>Personal Background:</strong></label>
+                <textarea id="personalBackground" name="personalBackground" required>Born and raised somewhere interesting.</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="professionalBackground"><strong>Professional Background:</strong></label>
+                <textarea id="professionalBackground" name="professionalBackground" required>Experience in some professional field.</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="academicBackground"><strong>Academic Background:</strong></label>
+                <textarea id="academicBackground" name="academicBackground" required>Studied something at a university.</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="webdevBackground"><strong>Background in Web Development:</strong></label>
+                <textarea id="webdevBackground" name="webdevBackground" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="computerPlatform"><strong>Primary Computer Platform:</strong></label>
+                <input type="text" id="computerPlatform" name="computerPlatform" required value="Some OS">
+            </div>
+
+            <div class="form-group">
+                <label><strong>Courses I'm Taking & Why:</strong></label>
+                <div id="coursesContainer">
+                    <div class="course-entry">
+                        <input type="text" name="courses[]" placeholder="Course name - reason for taking" required value="ITIS 3135 - Because it's required">
+                        <button type="button" class="delete-course" onclick="deleteCourse(this)">Delete</button>
+                    </div>
+                </div>
+                <button type="button" onclick="addCourse()">Add Course</button>
+            </div>
+
+            <div class="form-group">
+                <label for="funnyThing"><strong>Funny thing?</strong></label>
+                <input type="text" id="funnyThing" name="funnyThing" value="Something funny happened.">
+            </div>
+
+            <div class="form-group">
+                <label for="anythingElse"><strong>Anything else?</strong></label>
+                <textarea id="anythingElse" name="anythingElse">Some extra information.</textarea>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+                </label>
+            </div>
+
+            <div class="form-controls">
+                <input type="submit" value="Submit" class="button">
+                <input type="reset" value="Reset Form" class="button">
+            </div>
+        </form>
 
         <div id="result" style="display: none;">
             <button onclick="resetForm()" class="button">Create New Introduction</button>
