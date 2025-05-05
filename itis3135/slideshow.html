@@ -222,11 +222,6 @@
 
     <script>
         let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function changeSlide(n) {
-            showSlides(slideIndex += n);
-        }
 
         function showSlides(n) {
             let i;
@@ -248,13 +243,18 @@
             thumbnails[slideIndex - 1].className += " active";
         }
 
-        $(document).ready(function(){
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        $(document).ready(function() {
+            showSlides(slideIndex);
             $('.thumbnail').click(function() {
                 let index = $(this).index();
                 slideIndex = index + 1;
                 showSlides(slideIndex);
             });
-             $('header').html($('#cachedHeader').html());
+            $('header').html($('#cachedHeader').html());
             $('footer').html($('#cachedFooter').html());
         });
     </script>
