@@ -232,26 +232,30 @@
             let i;
             let slides = document.getElementsByClassName("slide");
             let thumbnails = document.getElementsByClassName("thumbnail");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             for (i = 0; i < thumbnails.length; i++) {
                 thumbnails[i].className = thumbnails[i].className.replace(" active", "");
             }
-            slides[slideIndex-1].style.display = "block";
-            thumbnails[slideIndex-1].className += " active";
+            slides[slideIndex - 1].style.display = "block";
+            thumbnails[slideIndex - 1].className += " active";
         }
 
         $(document).ready(function(){
-            $('.thumbnail').click(function(){
+            $('.thumbnail').click(function() {
                 let index = $(this).index();
                 slideIndex = index + 1;
                 showSlides(slideIndex);
             });
-            $('header').html( $('#cachedHeader').html() );
-            $('footer').html( $('#cachedFooter').html() );
+             $('header').html($('#cachedHeader').html());
+            $('footer').html($('#cachedFooter').html());
         });
     </script>
 </body>
