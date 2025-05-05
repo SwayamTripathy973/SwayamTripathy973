@@ -1,1 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow | ITIS 3135 | Swayam Tripathy</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts/slideshow.js" defer></script>
+    <script src="scripts/HTMLInclude.js"></script>
+    <style>
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+            padding: 20px;
+        }
 
+        .slide {
+            display: none;
+            text-align: center;
+        }
+
+        .active-slide {
+            display: block;
+        }
+
+        .slide img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .caption {
+            margin: 15px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.8);
+            text-decoration: none;
+        }
+
+        .next {
+            right: 20px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .thumbnail-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        .ai-prompts {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .prompt-title {
+            margin-bottom: 15px;
+        }
+
+        .ai-prompts ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .ai-prompts li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .ai-prompts li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header data-include="components/header.html"></header>
+
+    <main>
+        <h2>Name Slideshow</h2>
+        <p class="tagline">A visual journey through the letters of my name</p>
+
+        <div class="slideshow-container">
+            <div class="slide active-slide">
+                <img src="images/slideshow/optimized/s-800x600.jpg" alt="S for Sun" width="800" height="600" loading="lazy">
+                <div class="caption">S - for Sun (first letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/optimized/w-800x600.jpg" alt="W for Water" width="800" height="600" loading="lazy">
+                <div class="caption">W - for Water (second letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/optimized/a-800x600.jpg" alt="A for Apple" width="800" height="600" loading="lazy">
+                <div class="caption">A - for Apple (third letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/optimized/y-800x600.jpg" alt="Y for Yo-yo" width="800" height="600" loading="lazy">
+                <div class="caption">Y - for Yo-yo (fourth letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/optimized/a-alt-800x600.jpg" alt="A for Airplane" width="800" height="600" loading="lazy">
+                <div class="caption">A - for Airplane (fifth letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/optimized/m-800x600.jpg" alt="M for Moon" width="800" height="600" loading="lazy">
+                <div class="caption">M - for Moon (sixth letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/optimized/t-800x600.jpg" alt="T for Tree" width="800" height="600" loading="lazy">
+                <div class="caption">T - for Tree (first letter in Tripathy)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/optimized/r-800x600.jpg" alt="R for Rainbow" width="800" height="600" loading="lazy">
+                <div class="caption">R - for Rainbow (second letter in Tripathy)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/optimized/i-800x600.jpg" alt="I for Ice" width="800" height="600" loading="lazy">
+                <div class="caption">I - for Ice (third letter in Tripathy)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/optimized/p-800x600.jpg" alt="P for Planet" width="800" height="600" loading="lazy">
+                <div class="caption">P - for Planet (fourth letter in Tripathy)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/optimized/a-again-800x60
