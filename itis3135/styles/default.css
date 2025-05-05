@@ -1,21 +1,8 @@
-/* default.css for Awesome Cats theme */
-/* Box-sizing fix to include padding and border in element's total width and height */
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-/* Base styles */
 :root {
-    --primary-color: #90ee90; /* Light Green */
+    --primary-color: #e67e22;
     --text-color: #2c3e50;
-    --bg-color: #e0f2f7; /* Light Blue */
-    --link-color: #64b5f6; /* Blue */
+    --bg-color: #f5f0e1;
+    --link-color: #d35400;
 }
 
 html {
@@ -28,8 +15,8 @@ body, input, textarea, button {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--bg-color); 
+    color: var(--text-color); 
     line-height: 1.6;
     margin: 0;
     padding: 20px;
@@ -37,14 +24,14 @@ body {
 
 /* Typography */
 .text-primary {
-    color: var(--primary-color);
+    color: #e67e22;
     text-align: center;
 }
 
 .text-title {
     font-size: 2.5em;
     margin-bottom: 20px;
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid #e67e22;
     padding-bottom: 10px;
 }
 
@@ -76,13 +63,13 @@ p {
 }
 
 a {
-    color: var(--link-color);
+    color: #d35400; 
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--primary-color);
+    color: #e67e22;
     text-decoration: underline;
 }
 
@@ -106,7 +93,7 @@ a:hover {
 footer {
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 2px solid var(--primary-color);
+    border-top: 2px solid #e67e22;
     font-size: 0.9em;
 }
 
@@ -117,15 +104,15 @@ footer {
     body {
         padding: 15px;
     }
-
+    
     .heading-primary {
         font-size: 2em;
     }
-
+    
     main {
         padding: 20px;
     }
-
+    
     .profile-image {
         max-width: 250px;
     }
@@ -144,25 +131,25 @@ footer {
     body {
         padding: 10px;
     }
-
+    
     .heading-primary {
         font-size: 1.8em;
     }
-
+    
     .heading-secondary,
     .heading-tertiary {
         font-size: 1.2em;
     }
-
+    
     main {
         padding: 15px;
         max-width: 98%;
     }
-
+    
     .profile-image {
         max-width: 200px;
     }
-
+    
     p {
         font-size: 0.95em;
     }
@@ -180,7 +167,7 @@ footer {
 main {
     max-width: min(95%, 1200px);
     margin: 0 auto;
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     padding: 30px;
@@ -210,8 +197,6 @@ main {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
-    border: 1px solid #add8e6; /* Light Blue border for inputs/textareas */
-    box-sizing: border-box; /* Include padding and border in width */
 }
 
 .course-entry {
@@ -222,8 +207,6 @@ main {
 
 .course-entry input {
     flex: 1;
-    border: 1px solid #add8e6; /* Light Blue border for course inputs */
-    box-sizing: border-box; /* Include padding and border in width */
 }
 
 .delete-course {
@@ -232,7 +215,6 @@ main {
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    box-sizing: border-box; /* Include padding and border in width */
 }
 
 .form-controls {
@@ -244,15 +226,6 @@ main {
 .button {
     padding: 0.5rem 1rem;
     cursor: pointer;
-    background-color: #64b5f6; /* Blue button background */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    box-sizing: border-box; /* Include padding and border in width */
-}
-
-.button:hover {
-    background-color: #42a5f5; /* Darker Blue on hover */
 }
 
 #result {
@@ -261,7 +234,6 @@ main {
 
 .heading-tertiary {
     margin-top: 1.5rem;
-    color: var(--primary-color); /* Light Green heading */
 }
 
 /* Form Styles */
@@ -269,29 +241,194 @@ main {
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #e0f2f7; /* Light Blue form background */
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    box-sizing: border-box; /* Include padding and border in width */
 }
 
-.booking-form .form-group label {
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
     color: var(--text-color);
 }
 
-.booking-form .form-group input[type="text"],
-.booking-form .form-group input[type="tel"],
-.booking-form .form-group input[type="email"],
-.booking-form .form-group select {
-    border: 1px solid #add8e6;
-    box-sizing: border-box; /* Include padding and border in width */
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline;
+    margin-left: 0.5rem;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .reset-button {
     background-color: #2c3e50;
     color: white;
-    box-sizing: border-box; /* Include padding and border in width */
 }
 
 .submit-button {
     background-color: var(--primary-color);
+    color: white;
+}
+
+.reset-button:hover {
+    background-color: #34495e;
+}
+
+.submit-button:hover {
+    background-color: #d35400;
+}
+
+/* Welcome Section Styles */
+.welcome-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.course-highlights {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #fff5e6;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.feature-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feature-list li {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.feature-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Project Overview Styles */
+
+/* Drawing page styles */
+#canvas-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tagline {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.usage-guide {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.usage-guide__title {
+    margin-top: 0;
+    color: #333;
+}
+
+.usage-guide__steps {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.usage-guide__step {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.usage-guide__step:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.page-designs .page-design {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.dynamic-features ul li {
+    margin-bottom: 1rem;
+}
+
+.dynamic-features ul ul {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
