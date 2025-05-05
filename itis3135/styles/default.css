@@ -1,0 +1,303 @@
+/* default.css for Awesome Cats theme */
+/* Base styles */
+:root {
+    --primary-color: #90ee90; /* Light Green */
+    --text-color: #2c3e50;
+    --bg-color: #e0f2f7; /* Light Blue */
+    --link-color: #64b5f6; /* Blue */
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body, input, textarea, button {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Typography */
+.text-primary {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.text-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.text-section {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.text-subsection {
+    font-size: 1.25em;
+    margin-bottom: 20px;
+}
+
+/* Layout containers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.container-padding {
+    padding: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.profile-image {
+    max-width: 300px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-image {
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid var(--primary-color);
+    font-size: 0.9em;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet Devices */
+@media screen and (max-width: 980px) {
+    body {
+        padding: 15px;
+    }
+
+    .heading-primary {
+        font-size: 2em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .profile-image {
+        max-width: 250px;
+    }
+
+    nav ul {
+        padding: 0 10px;
+    }
+
+    nav li {
+        margin: 0 8px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .heading-primary {
+        font-size: 1.8em;
+    }
+
+    .heading-secondary,
+    .heading-tertiary {
+        font-size: 1.2em;
+    }
+
+    main {
+        padding: 15px;
+        max-width: 98%;
+    }
+
+    .profile-image {
+        max-width: 200px;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+}
+
+main {
+    max-width: min(95%, 1200px);
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.profile-image {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* BYO Introduction Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #add8e6; /* Light Blue border for inputs/textareas */
+}
+
+.course-entry {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.course-entry input {
+    flex: 1;
+    border: 1px solid #add8e6; /* Light Blue border for course inputs */
+}
+
+.delete-course {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.form-controls {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: #64b5f6; /* Blue button background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #42a5f5; /* Darker Blue on hover */
+}
+
+#result {
+    margin-top: 2rem;
+}
+
+.heading-tertiary {
+    margin-top: 1.5rem;
+    color: var(--primary-color); /* Light Green heading */
+}
+
+/* Form Styles */
+.booking-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #e0f2f7; /* Light Blue form background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.booking-form .form-group label {
+    color: var(--text-color);
+}
+
+.booking-form .form-group input[type="text"],
+.booking-form .form-group input[type="tel"],
+.booking-form .form-group input[type="email"],
+.booking-form .form-group select {
+    border: 1px solid #add8e6;
+}
+
+.reset-button {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.reset-button:hover {
+    background-color: #34495e;
+}
+
+.submit-button:hover {
+    background-color: #7cb342; /* Darker Light Green on hover */
+}
+
+/* Welcome Section Styles */
+.welcome-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 800px;
+    border-left: 4px solid var(--primary-color); /* Light Green accent */
+}
+
+.course-highlights {
+    margin-
