@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables - Whimsical Company</title>
+    <style>
+        /* Default styles (applied if no specific media query matches) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: black;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            padding: 20px;
+            min-height: calc(100vh - 140px);
+            box-sizing: border-box;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            font-size: 0.8em;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        h3 {
+            margin-top: 2em;
+            font-size: 1.2em;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 2em;
+        }
+        ul li {
+            margin-bottom: 0.5em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+        }
+        th, td {
+            padding: 0.75em;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        tfoot th {
+            background-color: #f0f0f0;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Styles for larger screens */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            main {
+                padding: 30px;
+            }
+            footer {
+                font-size: 0.9em;
+            }
+        }
+
+        /* Specific styles for the tables page */
+        table.complex-table thead tr {
+            background-color: #333;
+            color: white;
+        }
+        table.complex-table thead th {
+            color: white;
+        }
+
+        table.complex-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table.complex-table tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        table.complex-table tfoot th {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        .header-row {
+            background-color: #333 !important;
+            color: white !important;
+        }
+
+        .header-row th {
+            color: white !important;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        header nav ul li a:hover {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Swayam Tripathy Web Solutions | ITIS3135</h1>
+        <p>Your Gateway to Effective Web Solutions</p>
+        <nav>
+            <ul>
+                <li><a href="https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/">Home : Specfic Itis 3135 page</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="contract.html">Contract</a></li>
+                <li><a href="stuff/MY_crapPy_paGE.html">Crappy Page</a></li>
+                <li><a href="NewBoardGames/index.html">New Board Games</a></li>
+                <li><a href="Tripathywebsolutions.co/index.html">Tripathywebsolutions.co</a></li>
+                <li><a href="https://swayamtripathy973.github.io/hobby-site/">Hobby site</a></li>
+                <li><a href="MyWebsiteReviews/website_evaluations.html">Website Evaluations</a></li>
+                <li><a href="https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/byo_intro.html">BYO Intro</a></li>
+                <li><a href="https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/slideshow.html">Slide Show</a></li>
+                <li><a href="https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/drawing.html">Drawing.html</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>HTML Tables - Whimsical Company</h2>
+        <h3>My Tabular Data</h3>
+        <ol>
+            <li><strong>D.I. von Briesen:</strong> dvonbri1@uncc.edu, 1 year</li>
+            <li><strong>Esam Abdullah:</strong> eabdullah@gmail.com, 31 years</li>
+            <li><strong>Medina Gomez:</strong> gomez_med8@yahoo.com, 3 years</li>
+            <li><strong>Bilbo Baggins:</strong> bilbo@shire.me, 50 years</li>
+            <li><strong>Leia Organa:</strong> leia.organa@rebellion.org, 10 years</li>
+            <li><strong>Tony Stark:</strong> tony.stark@starkindustries.com, 15 years</li>
+            <li><strong>Hermione Granger:</strong> hermione.granger@hogwarts.ac.uk, 7 years</li>
+            <li><strong>Mario Mario:</strong> mario.mario@plumbingbros.com, 20 years</li>
+        </ol>
+
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Years of Service</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>D.I. von Briesen</td>
+                    <td>dvonbri1@uncc.edu</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Esam Abdullah</td>
+                    <td>eabdullah@gmail.com</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Medina Gomez</td>
+                    <td>gomez_med8@yahoo.com</td>
+                    <td>3</td>
+                </tr>
+                 <tr>
+                    <td>Bilbo Baggins</td>
+                    <td>bilbo@shire.me</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Leia Organa</td>
+                    <td>leia.organa@rebellion.org</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Tony Stark</td>
+                    <td>tony.stark@starkindustries.com</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                <td>Hermione Granger</td>
+                    <td>hermione.granger@hogwarts.ac.uk</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Mario Mario</td>
+                    <td>mario.mario@plumbingbros.com</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <table class="complex-table">
+                <caption>Employee Information</caption>
+                <thead>
+                    <tr class="header-row">
+                        <th scope="col">Category</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Years of Service</th>
+                        <th scope="col">Monthly Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="3" scope="rowgroup">Management</th>
+                        <td>D.I. von Briesen</td>
+                        <td>dvonbri1@uncc.edu</td>
+                        <td>1</td>
+                        <td>$83,333.34</td>
+                    </tr>
+                    <tr>
+                        <td>Bilbo Baggins</td>
+                        <td>bilbo@shire.me</td>
+                        <td>50</td>
+                        <td>$100,000</td>
+                    </tr>
+                    <tr>
+                        <td>Tony Stark</td>
+                        <td>tony.stark@starkindustries.com</td>
+                        <td>15</td>
+                        <td>$120,000</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" scope="rowgroup">Support</th>
+                        <td>Esam Abdullah</td>
+                        <td>eabdullah@gmail.com</td>
+                        <td>31</td>
+                        <td>$2,083.33</td>
+                    </tr>
+                    <tr>
+                        <td>Medina Gomez</td>
+                        <td>gomez_med8@yahoo.com</td>
+                        <td>3</td>
+                        <td>$4,583.33</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" scope="rowgroup">Other</th>
+                         <td>Leia Organa</td>
+                        <td>leia.organa@rebellion.org</td>
+                        <td>10</td>
+                        <td>$60,000</td>
+                    </tr>
+                    <tr>
+                        <td>Hermione Granger</td>
+                        <td>hermione.granger@hogwarts.ac.uk</td>
+                        <td>7</td>
+                        <td>$75,000</td>
+                    </tr>
+                    <tr>
+                        <td>Mario Mario</td>
+                        <td>mario.mario@plumbingbros.com</td>
+                        <td>20</td>
+                        <td>$40,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3" scope="row">Total Years of Service</th>
+                        <td>137</td>
+                        <td>$485,000.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <figcaption>Employee Information</figcaption>
+        </figure>
+    </main>
+    <footer>
+        <nav>
+            <a href="https://webpages.charlotte.edu/stripat5/">Charlotte.edu</a>
+            ||
+            <a href="https://github.com/SwayamTripathy973">GitHub</a>
+            ||
+            <a href="https://swayamtripathy973.github.io/SwayamTripathy973/itis3135/">ITIS3135.io</a>
+            ||
+            <a href="https://www.freecodecamp.org/Swayam_Tripathy">FreeCodeCamp</a>
+            ||
+            <a href="https://www.codecademy.com/profiles/Swayam_Tripathy">Codecademy</a>
+            ||
+            <a href="http://www.linkedin.com/in/swayam-tripathy">LinkedIn</a>
+            ||
+            <a href="byo_intro.html">BYO Intro</a>
+        </nav>
+        <p>Page Built by <a href="TripathyWebSolutions.com/index.html">Tripathy Web Solutions</a> | &copy;2023</p>
+        <p>
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener noreferrer">
+                <img src="images/button-valid-html5.gif" width="88" height="31" alt="Link to HTML validator">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener noreferrer">
+                <img src="images/button-valid-css.gif" width="88" height="31" alt="Link to CSS validator">
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

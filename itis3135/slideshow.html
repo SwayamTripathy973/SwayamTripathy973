@@ -1,0 +1,262 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow | ITIS 3135 | Swayam Tripathy</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts/slideshow.js" defer></script>
+    <script src="scripts/HTMLInclude.js"></script>
+    <style>
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .slide {
+            display: none;
+            text-align: center;
+        }
+
+        .active-slide {
+            display: block;
+        }
+
+        .slide img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .caption {
+            margin: 15px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.8);
+            text-decoration: none;
+        }
+
+        .next {
+            right: 20px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .thumbnail-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        .ai-prompts {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .prompt-title {
+            margin-bottom: 15px;
+        }
+
+        .ai-prompts ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .ai-prompts li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .ai-prompts li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header data-include="components/header.html"></header>
+
+    <main>
+        <h2>Name Slideshow</h2>
+        <p class="tagline">A visual journey through the letters of my name</p>
+
+        <div class="slideshow-container">
+            <div class="slide active-slide">
+                <img src="https://image.pollinations.ai/prompt/Sun" alt="S for Sun"  style="width:100%; max-height:500px; object-fit:cover;">
+                <div class="caption">S - for Sun (first letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="https://image.pollinations.ai/prompt/Water" alt="W for Water" style="width:100%; max-height:500px; object-fit:cover;">
+                <div class="caption">W - for Water (second letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="https://image.pollinations.ai/prompt/Apple" alt="A for Apple"  style="width:100%; max-height:500px; object-fit:cover;">
+                <div class="caption">A - for Apple (third letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="https://image.pollinations.ai/prompt/Yoyo" alt="Y for Yo-yo"  style="width:100%; max-height:500px; object-fit:cover;">
+                <div class="caption">Y - for Yo-yo (fourth letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="https://image.pollinations.ai/prompt/Airplane" alt="A for Airplane"  style="width:100%; max-height:500px; object-fit:cover;">
+                <div class="caption">A - for Airplane (fifth letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="https://image.pollinations.ai/prompt/Moon" alt="M for Moon"  style="width:100%; max-height:500px; object-fit:cover;">
+                <div class="caption">M - for Moon (sixth letter in Swayam)</div>
+            </div>
+            <div class="slide">
+                <img src="https://image.pollinations.ai/prompt/Tree" alt="T for Tree"  style="width:100%; max-height:500px; object-fit:cover;">
+                <div class="caption">T - for Tree (first letter in Tripathy)</div>
+            </div>
+            <div class="slide">
+                <img src="https://image.pollinations.ai/prompt/Rainbow" alt="R for Rainbow"  style="width:100%; max-height:500px; object-fit:cover;">
+                <div class="caption">R - for Rainbow (second letter in Tripathy)</div>
+            </div>
+            <div class="slide">
+                <img src="https://image.pollinations.ai/prompt/Ice" alt="I for Ice"  style="width:100%; max-height:500px; object-fit:cover;">
+                <div class="caption">I - for Ice (third letter in Tripathy)</div>
+            </div>
+            <div class="slide">
+                <img src="https://image.pollinations.ai/prompt/Planet" alt="P for Planet"  style="width:100%; max-height:500px; object-fit:cover;">
+                <div class="caption">P - for Planet (fourth letter in Tripathy)</div>
+            </div>
+            <div class="slide">
+                <img src="https://image.pollinations.ai/prompt/Airplane" alt="A for Airplane"  style="width:100%; max-height:500px; object-fit:cover;">
+                <div class="caption">A - for Airplane (fifth letter in Tripathy)</div>
+            </div>
+            <div class="slide">
+                <img src="https://image.pollinations.ai/prompt/Yellowhammer" alt="Y for Yellowhammer" style="width:100%; max-height:500px; object-fit: cover;">
+                <div class="caption">Y - for Yellowhammer (sixth letter in Tripathy)</div>
+            </div>
+        
+            <a class="prev" onclick="changeSlide(-1)">❮</a>
+            <a class="next" onclick="changeSlide(1)">❯</a>
+
+            <ul class="thumbnail-list">
+                <li><img src="https://image.pollinations.ai/prompt/Sun" alt="S for Sun" width="100" height="100"  class="thumbnail"></li>
+                <li><img src="https://image.pollinations.ai/prompt/Water" alt="W for Water" width="100" height="100"  class="thumbnail"></li>
+                <li><img src="https://image.pollinations.ai/prompt/Apple" alt="A for Apple" width="100" height="100"  class="thumbnail"></li>
+                <li><img src="https://image.pollinations.ai/prompt/Yoyo" alt="Y for Yo-yo" width="100" height="100"  class="thumbnail"></li>
+                <li><img src="https://image.pollinations.ai/prompt/Airplane" alt="A for Airplane" width="100" height="100"  class="thumbnail"></li>
+                <li><img src="https://image.pollinations.ai/prompt/Moon" alt="M for Moon" width="100" height="100"  class="thumbnail"></li>
+                <li><img src="https://image.pollinations.ai/prompt/Tree" alt="T for Tree" width="100" height="100"  class="thumbnail"></li>
+                <li><img src="https://image.pollinations.ai/prompt/Rainbow" alt="R for Rainbow" width="100" height="100"  class="thumbnail"></li>
+                <li><img src="https://image.pollinations.ai/prompt/Ice" alt="I for Ice" width="100" height="100"  class="thumbnail"></li>
+                <li><img src="https://image.pollinations.ai/prompt/Planet" alt="P for Planet" width="100" height="100"  class="thumbnail"></li>
+                 <li><img src="https://image.pollinations.ai/prompt/Airplane" alt="A for Airplane" width="100" height="100"  class="thumbnail"></li>
+                <li><img src="https://image.pollinations.ai/prompt/Yellowhammer" alt="Y for Yellowhammer" width="100" height="100"  class="thumbnail"></li>
+            </ul>
+        </div>
+
+        <div class="ai-prompts">
+            <h3 class="prompt-title">AI Image Generation Prompts (Using DALL-E)</h3>
+            <ul>
+                <li>A bright sun in the sky, photorealistic style</li>
+                <li>A clear water , studio lighting</li>
+                <li>A fresh red apple on a white background, photorealistic style</li>
+                <li>A colorful yoyo, with a motion blur effect, on a simple background</li>
+                <li>A commercial airplane flying through clouds, clear sky</li>
+                 <li>A full moon in a clear night sky</li>
+                <li>A tall green tree in a forest, sunlight</li>
+                <li>A vibrant rainbow in the sky after a rainstorm</li>
+                 <li>A clear ice cube, studio lighting</li>
+                <li>A vibrant planet in space, photorealistic style</li>
+                <li>A commercial airplane flying through clouds</li>
+                <li>A Yellowhammer bird perched on a branch, photorealistic style</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer data-include="components/footer.html"></footer>
+
+    <script>
+        let slideIndex = 1;
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let thumbnails = document.getElementsByClassName("thumbnail");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < thumbnails.length; i++) {
+                thumbnails[i].className = thumbnails[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            thumbnails[slideIndex - 1].className += " active";
+        }
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        $(document).ready(function() {
+            showSlides(slideIndex);
+            $('.thumbnail').click(function() {
+                let index = $(this).index();
+                slideIndex = index + 1;
+                showSlides(slideIndex);
+            });
+            $('header').html($('#cachedHeader').html());
+            $('footer').html($('#cachedFooter').html());
+        });
+    </script>
+</body>
+</html>
