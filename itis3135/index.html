@@ -9,118 +9,95 @@
             box-sizing: border-box;
         }
 
-        *, *::before, *::after { /* Apply box-sizing to all elements and pseudo-elements */
+        *, *::before, *::after {
             box-sizing: inherit;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
+            font-family: 'Georgia', serif; /* Updated font */
+            margin: 20px; /* Updated margin */
             padding: 0;
-            background-color: #f8f8f8; /* Light gray background */
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #dc3545; /* Red header */
-            color: white;
-            text-align: center;
-            padding: 1.5em 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        nav {
-            background-color: #343a40; /* Dark gray navigation */
-            color: white;
-            text-align: center;
-            padding: 0.8em 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #555;
+            background-color: #e9ecef; /* Updated background color */
+            color: #495057;
+            line-height: 1.7;
         }
 
         main {
             padding: 30px;
             margin: 30px auto;
-            max-width: 800px;
+            max-width: 900px; /* Updated max-width */
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         main h1 {
-            color: #333; /* Reset main h1 color */
+            color: #007bff; /* Updated main h1 color */
             margin-top: 0;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #333; /* Reset main h1 border */
-            padding-bottom: 10px;
-            font-size: 2.5em; /* Adjust main h1 size if needed */
+            margin-bottom: 25px;
+            border-bottom: 3px solid #007bff; /* Updated main h1 border */
+            padding-bottom: 15px;
+            font-size: 2.8em;
         }
 
         main h2 {
-            color: #dc3545; /* Red heading */
-            margin-top: 30px; /* Add top margin for better spacing */
+            color: #28a745; /* Updated heading color */
+            margin-top: 35px;
             margin-bottom: 20px;
-            border-bottom: 2px solid #dc3545;
-            padding-bottom: 10px;
-            font-size: 1.8em; /* Adjust main h2 size if needed */
+            border-bottom: 2px solid #28a745;
+            padding-bottom: 12px;
+            font-size: 2em;
         }
 
         main p {
-            margin-bottom: 1em;
+            margin-bottom: 1.2em;
+            font-size: 1.1em;
         }
 
         .btn-link {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 20px;
-            background-color: #dc3545; /* Red button */
+            margin-top: 25px;
+            padding: 14px 24px;
+            background-color: #28a745; /* Updated button color */
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
         }
 
         .btn-link:hover {
-            background-color: #c82333; /* Darker red on hover */
-        }
-
-        footer {
-            background-color: #343a40; /* Dark gray footer */
-            color: white;
-            text-align: center;
-            padding: 1.5em 0;
-            margin-top: 30px;
-            font-size: 0.9em;
-        }
-
-        footer nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        footer nav a:hover {
-            color: #f8f9fa; /* Light gray on hover */
+            background-color: #218838; /* Darker button on hover */
         }
     </style>
+    <script src="scripts/accumulus.js"></script>
+</head>
+<body>
+    <header data-include="components/header.html"></header>
+    <main>
+        <h1>Welcome to My Personal Homepage!</h1>
+        <p>Hello there! I'm Swayam, a student at the University of North Carolina at Charlotte. This is my personal corner of the web where I share a little about myself and the things I'm interested in.</p>
+
+        <h2>About Me</h2>
+        <p>I am currently pursuing my studies at UNC Charlotte, focusing on [Your Major, if you want to include it]. I'm passionate about learning and exploring new ideas, both inside and outside the classroom.</p>
+
+        <h2>My Interests</h2>
+        <p>Outside of my academic pursuits, I enjoy [mention a few hobbies or interests, e.g., coding, hiking, playing board games]. These activities help me relax and stay creative.</p>
+
+        <h2>Connect with Me</h2>
+        <p>Feel free to connect with me on the platforms below:</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/yourlinkedinprofile/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/yourgithubid" target="_blank">GitHub</a></li>
+            <li><a href="https://webpages.charlotte.edu/yourunccuserid/" target="_blank">My UNCC Webpage</a></li>
+            <li><a href="https://yourgithubid.github.io/" target="_blank">My GitHub Pages</a></li>
+        </ul>
+
+        <h2>Explore My Other Site</h2>
+        <p>You can also visit my board games website to see my latest projects and interests in that area.</p>
+        <a class="btn-link" href="NewBoardGames/index.html">Go to New Board Games site</a>
+    </main>
+    <footer data-include="components/footer.html"></footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function includeHTML() {
@@ -152,21 +129,5 @@
             includeHTML();
         });
     </script>
-</head>
-<body>
-    <header data-include="components/header.html"></header>
-    <main>
-        <h1>Welcome!</h1> <p>This is my personal homepage with a new red style!</p>
-        <h2>Check out my other site</h2>
-        <p>Click the link below to explore my new board games website.</p>
-        <a class="btn-link" href="NewBoardGames/index.html">Go to New Board Games site</a>
-    </main>
-    <footer data-include="components/footer.html">
-        <nav>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-        </nav>
-        <p>&copy; 2025 Swayam's Homepage</p>
-    </footer>
 </body>
 </html>
