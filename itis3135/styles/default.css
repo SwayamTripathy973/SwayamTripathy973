@@ -8,7 +8,7 @@ html {
 
 body {
     font-family: 'Georgia', serif; /* Updated font */
-    margin: 20px; /* Consider removing this and handling with main */
+    margin: 20px; /* Consider adjusting within media queries */
     padding: 0;
     background-color: #e9ecef; /* Updated background color */
     color: #495057;
@@ -19,7 +19,7 @@ main {
     display: block; /* Ensures main behaves as a block-level element */
     width: 90%; /* Percentage width for responsiveness */
     max-width: 1200px; /* Maximum width for larger screens */
-    margin: 30px auto; /* Centers the content horizontally */
+    margin: 0 auto; /* Fixed: Top and bottom margins set to 0 */
     padding: 30px;
     background-color: white;
     border-radius: 8px;
@@ -74,11 +74,12 @@ main p {
 /* For larger desktops */
 @media screen and (min-width: 1201px) {
     body {
-        margin: 30px auto; /* Center body content on very wide screens if needed */
+        margin: 30px auto; /* Adjust body margin for very wide screens */
         max-width: 1400px; /* Example max-width for the body */
     }
     main {
         padding: 40px; /* Adjust padding for larger screens */
+        margin: 30px auto; /* Added top/bottom margin for desktop */
     }
     main h1 {
         font-size: 3.2em;
@@ -96,7 +97,7 @@ main p {
     main {
         width: 95%; /* Slightly wider for tablets */
         padding: 25px;
-        margin: 20px auto;
+        margin: 20px auto; /* Added top/bottom margin for tablet */
     }
     main h1 {
         font-size: 2.6em;
@@ -114,7 +115,7 @@ main p {
     main {
         width: 100%; /* Full width on mobile */
         padding: 15px;
-        margin: 10px auto;
+        margin: 10px auto; /* Added top/bottom margin for mobile */
         border-radius: 0; /* Remove rounded corners on mobile */
         box-shadow: none; /* Remove shadow on mobile */
     }
